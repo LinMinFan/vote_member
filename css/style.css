@@ -7,9 +7,9 @@ body{
     width: 100%;
     min-height: 100vh;
 }
-body *{
+/* body *{
     border: 1px solid rgb(0, 0, 0);
-}
+} */
 /* 背景區(background) */
 .background{
     position: absolute;
@@ -24,17 +24,27 @@ body *{
 .header{
     position: relative;
     width: 100%;
-    min-height: 10vh;
+    min-height: 15vh;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    background: #0000008a;
 }
 /* 中間(section) */
 .section{
     position: relative;
     width: 100%;
-    min-height: 85vh;
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
 }
 /* 下方(footer) */
 .footer{
-    position: relative;
+    position: fixed;
+    bottom: 0;
     width: 100%;
     min-height: 5vh;
+    display: flex;
+    justify-content: center;
+    background: #0000008a;
 }

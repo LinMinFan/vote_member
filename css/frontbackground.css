@@ -2,6 +2,7 @@
 /* 置中大圓 */
 .circle{
     position: relative;
+    top: 10vh;
     width: 400px;
     height: 400px;
     background:linear-gradient(90deg,#49aeff,#ff4c89);

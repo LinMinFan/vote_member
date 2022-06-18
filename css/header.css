@@ -1,0 +1,52 @@
+.logo {
+    min-width: 80%;
+    min-height: 10vh;
+    display: flex;
+    align-items: center;
+}
+.logo a{
+    text-decoration: none;
+    font-size: 24px;
+    color: #2D96B3;
+    letter-spacing: 4px;
+    line-height: 26px;
+    font-weight: bold;
+    padding: 2px 10px;
+}
+.logo h3{
+    position:absolute;
+    width: 450px;
+    text-align: center;
+    left: calc((100% - 450px) / 2);
+    color: #CC3D6D;
+}
+
+.nav {
+    position: relative;
+    min-width: 80%;
+    min-height: 5vh;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+.nav ul {
+    position: relative;
+    list-style: none;
+    display: flex;
+}
+.nav ul li a{
+    color: #ffffff8a;
+    text-decoration: none;
+    font-size: 16px;
+    line-height: 16px;
+    padding: 9px 10px;
+    font-weight: bold;
+    transition: 0.5s;
+}
+.nav ul li a:hover{
+    background: #2D96B3;
+    color: #0000006a;
+    border-radius: 2px;
+    
+}

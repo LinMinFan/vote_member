@@ -137,7 +137,7 @@
 |id|int(11)|UNSIGNED|無|AI|會員編號|
 |account|varchar(12)|--|無|--|帳號|
 |password|varchar(40)|--|無|--|密碼|
-|nick|varchar(25)|--|無|--|暱稱|
+|nick|varchar(18)|--|無|--|暱稱|
 |name|varchar(30)|--|無|--|姓名|
 |email|varchar(128)|--|無|--|電子信箱|
 

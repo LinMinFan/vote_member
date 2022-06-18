@@ -1,0 +1,9 @@
+.copyright {
+    min-width: 80%;
+    min-height: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    color: #ffffff8a;
+}
