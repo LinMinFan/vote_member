@@ -1,0 +1,50 @@
+/* 背景css */
+/* 置中大圓 */
+.circle{
+    position: relative;
+    width: 400px;
+    height: 400px;
+    background:linear-gradient(90deg,#49aeff,#ff4c89);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* 圓內漸層及陰影設定 */
+.circle i{
+    position: absolute;
+    background:linear-gradient(90deg,#49aeff,#ff4c89);
+    inset: -5px;
+    z-index: 2;
+    border-radius: 50%;
+    filter: blur(50px);
+}
+.circle i:nth-child(2){
+    background: #ffffff;
+    inset: 5px;
+    z-index: 3;
+}
+.circle j{
+    position: absolute;
+    inset: -5px;
+    z-index: 2;
+    border-radius: 50%;
+    box-shadow: 20px 20px 50px #0000003a,
+    inset 20px 20px 50px #0000002a;
+}
+/* 文字及超連結 */
+.circle a{
+    position: relative;
+    z-index: 5;
+    text-decoration: none;
+    font-size: 50px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #0000006a;
+    text-shadow: 0 0 5px #0000009a;
+    letter-spacing: 5px;
+    line-height: 50px;
+}
+.circle a:hover{
+    color: #1d3779d0;
+}

@@ -1,0 +1,40 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    width: 100%;
+    min-height: 100vh;
+}
+body *{
+    border: 1px solid rgb(0, 0, 0);
+}
+/* 背景區(background) */
+.background{
+    position: absolute;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background:linear-gradient(90deg,#49aeff,#ff4c89);
+}
+/* 上方(header) */
+.header{
+    position: relative;
+    width: 100%;
+    min-height: 10vh;
+}
+/* 中間(section) */
+.section{
+    position: relative;
+    width: 100%;
+    min-height: 85vh;
+}
+/* 下方(footer) */
+.footer{
+    position: relative;
+    width: 100%;
+    min-height: 5vh;
+}
