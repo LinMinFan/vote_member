@@ -40,16 +40,19 @@
     background: #ffffff;
 }
 /* 帳號信箱輸入區 */
+/* 帳號 */
 .forgotform .inputbox:nth-child(1){
     width: 50%;
     height: 45px;
     margin: 10px 0;
 }
+/* 信箱 */
 .forgotform .inputbox:nth-child(2){
     width: 100%;
     height: 45px;
     margin: 10px 0;
 }
+/* 按鈕 */
 .forgotform .inputbox:nth-child(3){
     width: 100%;
     height: 45px;
@@ -59,7 +62,7 @@
     align-items: center;
 }
 
-.inputbox input {
+.forgotform .inputbox input {
     width: 100%;
     background: #ffffff41;
     border: none;
@@ -75,7 +78,7 @@
     box-shadow: 0 5px 15px #00000041;
 }
 
-.inputbox input::placeholder {
+.forgotform .inputbox input::placeholder {
     color: #000000;
 }
 /* 送出按鈕 */
@@ -89,12 +92,12 @@
     font-weight: 600;
 }
 
-.inputbox input[type="submit"]:hover {
+.forgotform .inputbox input[type="submit"]:hover {
     background: #848484;
     color: #ffffff;
 }
 /* 清除按鈕 */
-.inputbox input[type="reset"] {
+.forgotform .inputbox input[type="reset"] {
     background: #ffffff;
     max-width: 60px;
     padding: 5px;
@@ -104,7 +107,7 @@
     font-weight: 600;
 }
 
-.inputbox input[type="reset"]:hover {
+.forgotform .inputbox input[type="reset"]:hover {
     background: #848484;
     color: #ffffff;
 }

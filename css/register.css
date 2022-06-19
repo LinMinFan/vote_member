@@ -179,8 +179,8 @@
     color: #000000;
     box-shadow: 0 5px 15px #00000041;
 }
-/* 送出按鈕 */
-.inputbox input[type="submit"] {
+/* 註冊按鈕 */
+.registerform .inputbox input[type="submit"] {
     background: #ffffff;
     max-width: 60px;
     padding: 5px;
@@ -190,12 +190,12 @@
     font-weight: 600;
 }
 
-.inputbox input[type="submit"]:hover {
+.registerform .inputbox input[type="submit"]:hover {
     background: #848484;
     color: #ffffff;
 }
 /* 清除按鈕 */
-.inputbox input[type="reset"] {
+.registerform .inputbox input[type="reset"] {
     background: #ffffff;
     max-width: 60px;
     padding: 5px;
@@ -205,7 +205,7 @@
     font-weight: 600;
 }
 
-.inputbox input[type="reset"]:hover {
+.registerform .inputbox input[type="reset"]:hover {
     background: #848484;
     color: #ffffff;
 }
