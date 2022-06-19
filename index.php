@@ -17,23 +17,24 @@
 
 <body>
     <div class="background">
-        </div>
-        <div class="header">
-            <?php
+
+    </div>
+    <div class="header">
+        <?php
         include "./layout/header.php";
         ?>
     </div>
     <div class="section">
         <?php
-        if(isset($_GET['enter'])){
+        if (isset($_GET['enter'])) {
             include "./layout/section.php";
-        }else{
+        } else {
             include "./front/frontbackground.php";
         }
         ?>
     </div>
     <div class="footer">
-    <?php
+        <?php
         include "./layout/footer.php";
         ?>
     </div>

@@ -1,0 +1,98 @@
+/* 會員登入區半透明外框 */
+.login {
+    position: relative;
+    width: 400px;
+    min-height: 400px;
+    background: #ffffff1b;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 25px 45px #0000000c;
+    border: 1px solid #ffffff74;
+    border-right: 1px solid #ffffff21;
+    border-bottom: 1px solid #ffffff21;
+    margin: 100px auto;
+}
+/* 表單資料區 */
+.loginform {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 40px;
+}
+/* 會員登入標語 */
+.loginform h2 {
+    position: relative;
+    color: #ffffff;
+    letter-spacing: 5px;
+    margin-bottom: 40px;
+}
+
+.loginform h2::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    width: 110px;
+    height: 4px;
+    background: #ffffff;
+}
+/* 帳號密碼輸入區 */
+.inputbox {
+    width: 100%;
+    height: 45px;
+    margin: 20px 0;
+}
+
+.inputbox input {
+    width: 100%;
+    background: #ffffff41;
+    border: none;
+    outline: none;
+    padding: 10px 20px;
+    border-radius: 35px;
+    border: 1px solid #ffffff74;
+    border-right: 1px solid #ffffff21;
+    border-bottom: 1px solid #ffffff21;
+    font-size: 16px;
+    letter-spacing: 1px;
+    color: #000000;
+    box-shadow: 0 5px 15px #00000041;
+}
+
+.inputbox input::placeholder {
+    color: #000000;
+}
+/* 登入按鈕 */
+.inputbox input[type="submit"] {
+    background: #ffffff;
+    max-width: 100px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.inputbox input[type="submit"]:hover {
+    background: #848484;
+    color: #ffffff;
+}
+/* 忘記密碼 / 註冊帳號按鈕 */
+form a {
+    display: inline-block;
+    padding: 10px;
+    margin: 5px 36px;
+    color: #ffffff8a;
+    text-decoration: none;
+    font-size: 16px;
+    line-height: 16px;
+    font-weight: bold;
+    transition: 0.5s;
+}
+
+form a:hover {
+    background: #2D96B3;
+    color: #0000006a;
+    border-radius: 5px;
+}
+

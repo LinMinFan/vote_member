@@ -1,0 +1,212 @@
+/* 註冊帳號半透明外框 */
+.register {
+    position: relative;
+    width: 800px;
+    min-height: 300px;
+    background: #ffffff1b;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 25px 45px #0000000c;
+    border: 1px solid #ffffff74;
+    border-right: 1px solid #ffffff21;
+    border-bottom: 1px solid #ffffff21;
+    margin: auto 0;
+}
+/* 表單資料區 */
+.registerform {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 40px;
+}
+/* 註冊帳號標語 */
+.registerform h2 {
+    position: relative;
+    color: #ffffff;
+    letter-spacing: 5px;
+    margin-bottom: 40px;
+}
+
+.registerform h2::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    width: 110px;
+    height: 4px;
+    background: #ffffff;
+}
+/* 帳號暱稱輸入區 */
+.registerform .inputbox:nth-child(1){
+    height: 45px;
+    margin: 10px 0;
+    display: flex;
+    justify-content: center;
+}
+.registerform .inputbox:nth-child(1) label{
+    width: 90px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #ffffff;
+    line-height: 45px;
+}
+.registerform .inputbox:nth-child(1) input{
+    width: 235px;
+    background: #ffffff41;
+    border: none;
+    outline: none;
+    padding: 10px 20px;
+    border-radius: 35px;
+    border: 1px solid #ffffff74;
+    border-right: 1px solid #ffffff21;
+    border-bottom: 1px solid #ffffff21;
+    font-size: 16px;
+    letter-spacing: 1px;
+    color: #000000;
+    box-shadow: 0 5px 15px #00000041;
+    margin-right: 20px;
+}
+/* 密碼 / 確認密碼輸入區 */
+.registerform .inputbox:nth-child(2){
+    height: 45px;
+    margin: 10px 0;
+    display: flex;
+    justify-content: center;
+}
+.registerform .inputbox:nth-child(2) label{
+    width: 90px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #ffffff;
+    line-height: 45px;
+}
+.registerform .inputbox:nth-child(2) input{
+    width: 235px;
+    background: #ffffff41;
+    border: none;
+    outline: none;
+    padding: 10px 20px;
+    border-radius: 35px;
+    border: 1px solid #ffffff74;
+    border-right: 1px solid #ffffff21;
+    border-bottom: 1px solid #ffffff21;
+    font-size: 16px;
+    letter-spacing: 1px;
+    color: #000000;
+    box-shadow: 0 5px 15px #00000041;
+    margin-right: 20px;
+}
+/* 姓名輸入區 */
+.registerform .inputbox:nth-child(3){
+    height: 45px;
+    margin: 10px 0;
+    display: flex;
+    justify-content: center;
+}
+.registerform .inputbox:nth-child(3) label{
+    width: 90px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #ffffff;
+    line-height: 45px;
+}
+.registerform .inputbox:nth-child(3) input{
+    width: 580px;
+    background: #ffffff41;
+    border: none;
+    outline: none;
+    padding: 10px 20px;
+    border-radius: 35px;
+    border: 1px solid #ffffff74;
+    border-right: 1px solid #ffffff21;
+    border-bottom: 1px solid #ffffff21;
+    font-size: 16px;
+    letter-spacing: 1px;
+    color: #000000;
+    box-shadow: 0 5px 15px #00000041;
+    margin-right: 20px;
+}
+/* 信箱輸入區 */
+.registerform .inputbox:nth-child(4){
+    height: 45px;
+    margin: 10px 0;
+    display: flex;
+    justify-content: center;
+}
+.registerform .inputbox:nth-child(4) label{
+    width: 90px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #ffffff;
+    line-height: 45px;
+}
+.registerform .inputbox:nth-child(4) input{
+    width: 580px;
+    background: #ffffff41;
+    border: none;
+    outline: none;
+    padding: 10px 20px;
+    border-radius: 35px;
+    border: 1px solid #ffffff74;
+    border-right: 1px solid #ffffff21;
+    border-bottom: 1px solid #ffffff21;
+    font-size: 16px;
+    letter-spacing: 1px;
+    color: #000000;
+    box-shadow: 0 5px 15px #00000041;
+    margin-right: 20px;
+}
+/* 註冊 / 清除案扭區 */
+.registerform .inputbox:nth-child(5){
+    width: 100%;
+    height: 45px;
+    margin: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.registerform .inputbox:nth-child(5) input{
+    width: 100%;
+    outline: none;
+    border-radius: 35px;
+    border: 1px solid #ffffff74;
+    border-right: 1px solid #ffffff21;
+    border-bottom: 1px solid #ffffff21;
+    letter-spacing: 1px;
+    color: #000000;
+    box-shadow: 0 5px 15px #00000041;
+}
+/* 送出按鈕 */
+.inputbox input[type="submit"] {
+    background: #ffffff;
+    max-width: 60px;
+    padding: 5px;
+    font-size: 14px;
+    margin: 0px 30px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.inputbox input[type="submit"]:hover {
+    background: #848484;
+    color: #ffffff;
+}
+/* 清除按鈕 */
+.inputbox input[type="reset"] {
+    background: #ffffff;
+    max-width: 60px;
+    padding: 5px;
+    font-size: 14px;
+    margin: 0px 30px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.inputbox input[type="reset"]:hover {
+    background: #848484;
+    color: #ffffff;
+}
+

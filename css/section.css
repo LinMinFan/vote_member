@@ -13,7 +13,7 @@
     width: 200px;
     height: 115px;
     border-radius: 20px;
-    box-shadow: 0px 35px 80px #d5d5d5;
+    box-shadow: 0px 10px 30px #d5d5d5;
     transition: 0.5s;
     background:linear-gradient(#3DFFEF,#DC40FF);
     margin: 20px 30px;
@@ -34,7 +34,7 @@
     line-height: 30px;
     text-align: center;
     border-radius: 5px;
-    box-shadow: 0 15px 50px #a5a5a5;
+    box-shadow: 0 5px 15px #a5a5a5;
     transition: 0.5s;
     background:linear-gradient(#3DFFEF,#DC40FF);
 }
