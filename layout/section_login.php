@@ -1,7 +1,11 @@
+<!-- 帳號密碼錯誤訊息提示訊息 -->
+<h2 class="message">
+    <?=(isset($_GET['error']))?$_GET['error']:'' ;?>
+</h2>
 <div class="login">
         <div class="loginform">
             <h2>會員登入</h2>
-            <form action="./chk_login.php" method="post">
+            <form action="./api/chk_login.php" method="post">
                 <div class="inputbox">
                     <input type="text" name="account" id="" placeholder="帳號:">
                 </div>

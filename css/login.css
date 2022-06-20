@@ -1,3 +1,10 @@
+/* 錯誤訊息標題 */
+.message{
+    position: absolute;
+    left: calc(50% - 48px);
+    top: 3vh;
+    color: #a30000;
+}
 /* 會員登入區半透明外框 */
 .login {
     position: relative;

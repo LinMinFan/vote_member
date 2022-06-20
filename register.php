@@ -1,3 +1,6 @@
+<?php
+include "./api/function.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -26,7 +29,7 @@
     </div>
     <div class="section">
         <?php
-            include "./layout/section_register.php";
+        include "./layout/section_register.php";
         ?>
     </div>
     <div class="footer">

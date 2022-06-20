@@ -1,3 +1,16 @@
+<?php
+include "./api/function.php";
+//若無session直接導向登入頁不停留此頁
+if (!isset($_SESSION['user'])) {
+    //header('location:/login.php');
+    to('login.php');
+}
+//以登入的session抓取會員資料
+//$sql ="SELECT * FROM `vote_member_users` WHERE `account`='{$_SESSION['user']}'";
+//$dateall = $pdo->query($sql)->fetch(PDO::FETCH_ASSOC);
+$date = ['account' => $_SESSION['user']];
+$dateall = all('vote_member_users', $date);
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -29,7 +42,7 @@
     </div>
     <div class="section">
         <?php
-            include "./layout/section_member_center.php";
+        include "./layout/section_member_center.php";
         ?>
     </div>
     <div class="footer">
