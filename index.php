@@ -1,5 +1,10 @@
 <?php
+//連線資料庫讀取全部投票主題
 include "./api/function.php";
+$subjects = all('`vote_member_subjects`');
+$type = all('`vote_member_type`');
+//dd($subjects);
+//dd($type);
 ?>
 <!DOCTYPE html>
 <html lang="en">

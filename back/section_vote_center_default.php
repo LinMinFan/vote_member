@@ -22,24 +22,10 @@
                         <?= $start . " ~ " . $end; ?>
                     </span>
                 </div>
-                <!-- 判斷是否有登入決定功能鍵連結 -->
-                <?php
-                if (isset($_SESSION['user'])) {
-                ?>
                     <div class='buttom'>
                         <a href=''>參加投票</a>
                         <a href=''>查看結果</a>
                     </div>
-                <?php
-                } else {
-                ?>
-                    <div class='buttom'>
-                        <a href='./login.php'>參加投票</a>
-                        <a href=''>查看結果</a>
-                    </div>
-                <?php
-                }
-                ?>
             </div>
         </div>
     <?php
