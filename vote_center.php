@@ -1,8 +1,11 @@
 <?php
-//連線資料庫讀取全部投票主題
+//連線資料庫讀取全部投票主題選項資料
 include "./api/function.php";
+$users = all('`vote_member_users`');
 $subjects = all('`vote_member_subjects`');
 $type = all('`vote_member_type`');
+$options = all('`vote_member_options`');
+$logs = all('`vote_member_log`');
 //若無session直接導向登入頁不停留此頁
 if (!isset($_SESSION['user'])) {
     //header('location:/login.php');

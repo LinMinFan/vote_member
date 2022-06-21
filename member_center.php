@@ -28,7 +28,7 @@ $dateall = find('vote_member_users', $_SESSION['id']);
     <link rel="stylesheet" href="./css/member_center_edit.css">
     <link rel="stylesheet" href="./css/member_center_delete.css">
     <link rel="stylesheet" href="./css/header.css">
-    <link rel="stylesheet" href="./css/section.css">
+    <link rel="stylesheet" href="./css/section_index.css">
     <link rel="stylesheet" href="./css/footer.css">
 
 </head>

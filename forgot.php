@@ -18,7 +18,7 @@ if (isset($_SESSION['user'])) {
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/forgot.css">
     <link rel="stylesheet" href="./css/header.css">
-    <link rel="stylesheet" href="./css/section.css">
+    <link rel="stylesheet" href="./css/section_index.css">
     <link rel="stylesheet" href="./css/footer.css">
 
 </head>

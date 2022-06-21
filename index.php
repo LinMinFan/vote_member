@@ -18,7 +18,7 @@ $type = all('`vote_member_type`');
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/frontbackground.css">
     <link rel="stylesheet" href="./css/header.css">
-    <link rel="stylesheet" href="./css/section.css">
+    <link rel="stylesheet" href="./css/section_index.css">
     <link rel="stylesheet" href="./css/footer.css">
 
 </head>
@@ -35,7 +35,7 @@ $type = all('`vote_member_type`');
     <div class="section">
         <?php
         if (isset($_GET['enter'])) {
-            include "./layout/section.php";
+            include "./layout/section_index.php";
         } else {
             include "./front/frontbackground.php";
         }

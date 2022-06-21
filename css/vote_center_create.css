@@ -1,0 +1,143 @@
+/* 表單區塊 */
+.create {
+    min-height: calc(100% - 45px);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 半透明背板 */
+.createForm {
+    width: 1000px;
+    min-height: calc(85%);
+    background: #ffffff1b;
+    border-radius: 10px;
+    display: flex;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 25px 45px #0000000c;
+    border: 1px solid #ffffff74;
+    border-right: 1px solid #ffffff21;
+    border-bottom: 1px solid #ffffff21;
+}
+
+/* 表單 */
+.createForm form {
+    width: 100%;
+    min-height: 100%;
+    padding: 10px;
+
+}
+
+/* 欄位 */
+.createForm form .inputbox {
+    height: 45px;
+}
+
+/* 投票主題 */
+.createForm form .inputbox .subLb {
+    width: 90px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #ffffff;
+    line-height: 45px;
+}
+
+/* 輸入內容 */
+.createForm form .inputbox .subjectVote {
+    width: calc(100% - 120px);
+    height: 45px;
+    background: #ffffff41;
+    border: none;
+    outline: none;
+    padding: 0 15px;
+    border-radius: 25px;
+    border: 1px solid #ffffff74;
+    border-right: 1px solid #ffffff21;
+    border-bottom: 1px solid #ffffff21;
+    font-size: 20px;
+    line-height: 45px;
+    letter-spacing: 1px;
+    color: #000000;
+    box-shadow: 0 5px 15px #00000041;
+}
+
+/* 投票選項 */
+/* 單 / 複選 選擇 */
+.selector {
+    margin: 5px 0;
+}
+
+.selector h4 {
+    color: #ffffff;
+}
+
+.selector label {
+    font-size: 14px;
+    line-height: 40px;
+}
+
+/* 選項內容 */
+.optionLimit {
+    width: 100%;
+    min-height: calc(100% - 230px);
+    font-size: 14px;
+}
+.optionLimit label{
+    width: 35px;
+    height: 20px;
+    line-height: 20px;
+    margin: 15px 10px;
+}
+.optionLimit input{
+    width: calc((100% / 4) - 65px);
+    height: 20px;
+    line-height: 20px;
+    margin: 15px 5px;
+}
+    /* 送出按鈕 */
+.createForm form .opbth {
+    line-height: 45px;
+    text-align: center;
+}
+.createForm form .opbth input{
+    width: 100%;
+    outline: none;
+    border-radius: 35px;
+    border: 1px solid #ffffff74;
+    border-right: 1px solid #ffffff21;
+    border-bottom: 1px solid #ffffff21;
+    letter-spacing: 1px;
+    color: #000000;
+    box-shadow: 0 5px 15px #00000041;
+}
+.createForm form .inputbox input[type="submit"] {
+    background: #ffffff;
+    max-width: 60px;
+    padding: 5px;
+    font-size: 14px;
+    margin: 0px 30px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.createForm form .inputbox input[type="submit"]:hover {
+    background: #848484;
+    color: #ffffff;
+}
+
+/* 清除按鈕 */
+.createForm form .inputbox input[type="reset"] {
+    background: #ffffff;
+    max-width: 60px;
+    padding: 5px;
+    font-size: 14px;
+    margin: 0px 30px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.createForm form .inputbox input[type="reset"]:hover {
+    background: #848484;
+    color: #ffffff;
+}

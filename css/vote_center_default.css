@@ -7,6 +7,29 @@
     flex-wrap: wrap;
     padding: 10px 5px;
 }
+/* 排序按鈕 */
+.order{
+    position: fixed;
+    top: 15px;
+    right: 3%;
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 30px;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+}
+.order a{
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    text-decoration: none;
+    color: #00447b;
+}
+.order a:hover{
+    background: #00447b;
+    color: #c8c8c8;
+}
 /* 投票項目 */
 .card {
     position: relative;
@@ -100,4 +123,26 @@
 .subject .buttom a:hover{
     color: #49aeff;
     background: #0000008a;
+}
+.page {
+    position: fixed;
+    bottom: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 25px;
+    width: 100%;
+    height: 25px;
+    text-align: center;
+}
+.page a{
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    margin: 0 5px;
+    text-decoration: none;
+    color: #00447b;
+}
+.page a:hover{
+    background: #00447b;
+    color: #c8c8c8;
 }
