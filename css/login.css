@@ -1,7 +1,7 @@
 /* 錯誤訊息標題 */
 .message{
     position: absolute;
-    left: calc(50% - 48px);
+    left: calc(50% - 84px);
     top: 3vh;
     color: #a30000;
 }

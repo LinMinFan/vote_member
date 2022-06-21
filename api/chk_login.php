@@ -33,21 +33,21 @@ $userpw = $pdo->query($chk_pw)->fetchColumn();
 if (empty($useracc)) {
     //核對帳號
     //header('location:../login.php?error=帳號錯誤');
-    to('../login.php?error=帳號錯誤');
+    to('../login.php?error=輸入帳號不存在');
 } else if (empty($userpw)) {
     //核對密碼
     //header('location:../login.php?error=密碼錯誤');
-    to('../login.php?error=密碼錯誤');
+    to('../login.php?error=輸入密碼有錯誤');
 } else {
     //登入成功並使用帳號&&id&&nick設定session
     //$sql = "SELECT `id` FROM `vote_member_users` WHERE `account`='$acc'";
     //$id = $pdo->query($sql)->fetch(PDO::FETCH_ASSOC);
-    $date = ['account' => $acc];
-    $dateall = all('vote_member_users',$date);
+    $chk_user = ['account' => $acc];
+    $userdate = all('vote_member_users',$chk_user);
     //dd($dateall);
     $_SESSION['user'] = $acc;
-    $_SESSION['id'] = $dateall[0]['id'];
-    $_SESSION['nick'] = $dateall[0]['nick'];
+    $_SESSION['id'] = $userdate[0]['id'];
+    $_SESSION['nick'] = $userdate[0]['nick'];
     //header('location:../member_center.php');
     to('../member_center.php');
 }

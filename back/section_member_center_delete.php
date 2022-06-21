@@ -8,7 +8,7 @@
 if (isset($_GET['confirm'])) {
     echo "<script>
     if (confirm('確定刪除？')) {
-        location.href='./remove_acc.php?account={$account}';
+        location.href='./api/remove_acc.php?account={$dateall['account']}';
     }else{
         location.href='./member_center.php?delete=activ';
     }

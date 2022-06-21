@@ -1,5 +1,10 @@
 <?php
 include "./api/function.php";
+//若有session直接導向會員中心不再停留此頁
+if (isset($_SESSION['user'])) {
+    //header('location:/member_center.php');
+    to('member_center.php');
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -29,7 +34,7 @@ include "./api/function.php";
     </div>
     <div class="section">
         <?php
-            include "./layout/section_forgot.php";
+        include "./layout/section_forgot.php";
         ?>
     </div>
     <div class="footer">

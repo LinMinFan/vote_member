@@ -157,7 +157,7 @@ function del($table, $arg)
         
         $sql .= " `id`='$arg'";
     }
-
+    //echo $sql;
     return $pdo->exec($sql);
 }
 

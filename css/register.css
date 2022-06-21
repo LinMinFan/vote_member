@@ -1,3 +1,11 @@
+/* 錯誤訊息標題 */
+.message{
+    position: absolute;
+    left: calc(50% - 84px);
+    top: 3vh;
+    color: #a30000;
+}
+
 /* 註冊帳號半透明外框 */
 .register {
     position: relative;

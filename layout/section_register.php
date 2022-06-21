@@ -1,7 +1,11 @@
+<!-- 錯誤訊息提示訊息 -->
+<h2 class="message">
+    <?=(isset($_GET['error']))?$_GET['error']:'' ;?>
+</h2>
 <div class="register">
     <div class="registerform">
         <h2>註冊帳號</h2>
-        <form action="./store_member.php" method="post">
+        <form action="./api/store_member.php" method="post">
             <div class="inputbox">
                 <label class="accLb" for="">帳號：</label>
                 <input class="account" type="text" name="account" required>

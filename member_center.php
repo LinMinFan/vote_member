@@ -8,8 +8,10 @@ if (!isset($_SESSION['user'])) {
 //以登入的session抓取會員資料
 //$sql ="SELECT * FROM `vote_member_users` WHERE `account`='{$_SESSION['user']}'";
 //$dateall = $pdo->query($sql)->fetch(PDO::FETCH_ASSOC);
-$date = ['account' => $_SESSION['user']];
-$dateall = all('vote_member_users', $date);
+//$date = ['account' => $_SESSION['user']];
+//$dateall = all('vote_member_users', $date);
+$dateall = find('vote_member_users', $_SESSION['id']);
+
 ?>
 <!DOCTYPE html>
 <html lang="en">

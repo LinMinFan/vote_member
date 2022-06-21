@@ -1,3 +1,10 @@
+/* 錯誤訊息標題 */
+.message{
+    position: absolute;
+    left: calc(50% - 84px);
+    top: 3vh;
+    color: #a30000;
+}
 /* 重設密碼半透明外框 */
 .forgot {
     position: relative;
