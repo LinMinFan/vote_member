@@ -202,8 +202,8 @@ function  save($table, $arg)
         $sql .= "UPDATE $table SET " . implode(" , ", $tmp) . " WHERE `id`='{$arg['id']}'";
     } else {
         //insert
-        $cols = implode("`,`", array_keys($arg));
-        $values = implode("','", $arg);
+        $cols = implode("`,`", array_keys($arg)); //關聯式索引key = 資料表欄位
+        $values = implode("','", $arg); //values = 填入欄位的值
 
         //建立新增的sql語法
         $sql = "INSERT INTO $table (`$cols`) VALUES('$values')";

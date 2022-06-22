@@ -1,7 +1,8 @@
 <?php
 //連線資料庫
 include "./function.php";
-$pdo = pdo();//檢查帳號信箱是否正確
+$pdo = pdo();
+//檢查帳號信箱是否正確
 $acc = $_POST['account'];
 $email = $_POST['email'];
 //驗證帳號沒有存在1存在0不存在

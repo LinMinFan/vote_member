@@ -46,6 +46,41 @@
     color: #ffffff;
 }
 
+/* 主題分類 */
+.type_id {
+    padding: 15px 0;
+    line-height: 20px;
+}
+.type_id select{
+    background: #ffffff41;
+    border: none;
+    outline: none;
+    border: 1px solid #ffffff74;
+    border-right: 1px solid #ffffff21;
+    border-bottom: 1px solid #ffffff21;
+    box-shadow: 0 5px 15px #00000041;
+    border-radius: 10px;
+    width: 50px;
+    font-weight: bold;
+    margin: 0 38px;
+}
+/* 開始 / 結束時間 */
+.start_end {
+    padding: 10px 0;
+    line-height: 24px;
+}
+.start_end input{
+    background: #ffffff41;
+    border: none;
+    outline: none;
+    border: 1px solid #ffffff74;
+    border-right: 1px solid #ffffff21;
+    border-bottom: 1px solid #ffffff21;
+    box-shadow: 0 5px 15px #00000041;
+    border-radius: 10px;
+    margin: 0px 10px;
+}
+
 /* 輸入內容 */
 .createForm form .inputbox .subjectVote {
     width: calc(100% - 120px);
@@ -79,52 +114,77 @@
     font-size: 14px;
     line-height: 40px;
 }
+
 /* 增加減少選項 */
-.selebth{
-    width: 100px;
+.selebth {
+    position: absolute;
+    top: 180px;
+    left: 120px;
+    width: 250px;
     display: flex;
-    justify-content: space-between;
+    justify-content: start;
 }
-.selebth button{
+
+.selebth button {
     width: 40px;
     height: 25px;
-    border-radius: 8px;
+    border-radius: 15px;
     border: 1px solid #ffffff74;
     border-right: 1px solid #ffffff21;
     border-bottom: 1px solid #ffffff21;
     box-shadow: 0 5px 15px #00000041;
     transition: 0.5s;
+    margin: 0 15px;
 }
-.selebth button:hover{
+
+.selebth button:hover {
     background: #848484;
     color: #ffffff;
+}
+
+/* 選項隱藏文字 */
+#text {
+    font-weight: bold;
+    color: #a30000;
 }
 
 /* 選項內容 */
 .optionLimit {
     width: 100%;
-    min-height: calc(100% - 230px);
+    min-height: calc(100% - 360px);
     font-size: 14px;
+    display: flex;
+    justify-content: start;
+    align-items: unset;
+    flex-wrap: wrap;
+
 }
-.optionLimit label{
-    width: 35px;
+
+.optionLimit label {
+    width: 46px;
     height: 20px;
     line-height: 20px;
-    margin: 15px 10px;
+    margin: 15px 7px;
 }
-.optionLimit input{
+
+.optionLimit input {
     width: calc((100% / 4) - 75px);
     height: 20px;
     line-height: 20px;
     margin: 15px 5px;
 }
-    /* 送出按鈕 */
+
+/* 送出按鈕 */
 .createForm form .opbth {
+    width: 100%;
+    bottom: 20px;
+    position: absolute;
     line-height: 45px;
     text-align: center;
 }
-.createForm form .opbth input{
-    width: 100%;
+
+.createForm form .opbth input {
+    width: 60px;
     outline: none;
     border-radius: 35px;
     border: 1px solid #ffffff74;
@@ -134,6 +194,7 @@
     color: #000000;
     box-shadow: 0 5px 15px #00000041;
 }
+
 .createForm form .inputbox input[type="submit"] {
     background: #ffffff;
     max-width: 60px;
