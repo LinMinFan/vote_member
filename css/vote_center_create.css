@@ -30,17 +30,20 @@
 }
 
 /* 欄位 */
-.createForm form .inputbox {
+.createForm form .submajor {
     height: 45px;
+    display: flex;
+    align-items: center;
 }
 
 /* 投票主題 */
 .createForm form .inputbox .subLb {
-    width: 90px;
+    width: 100px;
+    height: 45px;
+    line-height: 45px;
     font-size: 20px;
     font-weight: bold;
     color: #ffffff;
-    line-height: 45px;
 }
 
 /* 輸入內容 */
@@ -50,13 +53,13 @@
     background: #ffffff41;
     border: none;
     outline: none;
-    padding: 0 15px;
+    padding: 5px 15px;
     border-radius: 25px;
     border: 1px solid #ffffff74;
     border-right: 1px solid #ffffff21;
     border-bottom: 1px solid #ffffff21;
-    font-size: 20px;
-    line-height: 45px;
+    font-size: 18px;
+    line-height: 33px;
     letter-spacing: 1px;
     color: #000000;
     box-shadow: 0 5px 15px #00000041;
@@ -76,6 +79,26 @@
     font-size: 14px;
     line-height: 40px;
 }
+/* 增加減少選項 */
+.selebth{
+    width: 100px;
+    display: flex;
+    justify-content: space-between;
+}
+.selebth button{
+    width: 40px;
+    height: 25px;
+    border-radius: 8px;
+    border: 1px solid #ffffff74;
+    border-right: 1px solid #ffffff21;
+    border-bottom: 1px solid #ffffff21;
+    box-shadow: 0 5px 15px #00000041;
+    transition: 0.5s;
+}
+.selebth button:hover{
+    background: #848484;
+    color: #ffffff;
+}
 
 /* 選項內容 */
 .optionLimit {
@@ -90,7 +113,7 @@
     margin: 15px 10px;
 }
 .optionLimit input{
-    width: calc((100% / 4) - 65px);
+    width: calc((100% / 4) - 75px);
     height: 20px;
     line-height: 20px;
     margin: 15px 5px;
@@ -119,6 +142,7 @@
     margin: 0px 30px;
     cursor: pointer;
     font-weight: 600;
+    transition: 0.5s;
 }
 
 .createForm form .inputbox input[type="submit"]:hover {
@@ -135,6 +159,7 @@
     margin: 0px 30px;
     cursor: pointer;
     font-weight: 600;
+    transition: 0.5s;
 }
 
 .createForm form .inputbox input[type="reset"]:hover {

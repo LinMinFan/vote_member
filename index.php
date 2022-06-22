@@ -5,6 +5,10 @@ $subjects = all('`vote_member_subjects`');
 $type = all('`vote_member_type`');
 //dd($subjects);
 //dd($type);
+//檢視若有登入就載入暱稱
+if (isset($_SESSION['user'])) {
+    $dateall = find('vote_member_users', $_SESSION['id']);
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">

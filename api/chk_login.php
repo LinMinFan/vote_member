@@ -47,7 +47,6 @@ if (empty($useracc)) {
     //dd($dateall);
     $_SESSION['user'] = $acc;
     $_SESSION['id'] = $userdate[0]['id'];
-    $_SESSION['nick'] = $userdate[0]['nick'];
     //header('location:../member_center.php');
     to('../member_center.php');
 }

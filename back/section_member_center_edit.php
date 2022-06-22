@@ -1,9 +1,14 @@
 <!-- 帳號資料都以抓入$dateall[] -->
 <?php
 //dd($dateall);
+//echo $dateall['nick'];
 ?>
+<!-- 帳號密碼錯誤訊息提示訊息 -->
+<h2 class="message">
+    <?=(isset($_GET['error']))?$_GET['error']:'' ;?>
+</h2>
 <div class="edit">
-        <form action="">
+        <form action="./api/save_member.php" method="POST">
             <!-- 不得修改 -->
             <div class="inputbox">
             <label class="accLb" for="">帳號：</label>
@@ -19,7 +24,7 @@
             <!-- 可修改 -->
             <div class="inputbox">
             <label class="nickLb" for="">暱稱：</label>
-            <input class="nick" type="text" value="<?= $dateall['nick']; ?>" required>
+            <input class="nick" type="text" placeholder="<?= $dateall['nick']; ?>" value="<?= $dateall['nick']; ?>" name="nick" required >
             </div>
             <!-- 不得修改 -->
             <div class="inputbox">

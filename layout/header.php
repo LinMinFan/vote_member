@@ -3,7 +3,7 @@
     <h3>
         <?php
         if (isset($_SESSION['user'])) {
-            echo $_SESSION['nick'] . ':您好';
+            echo $dateall['nick'] . ':您好';
         } else {
             echo '歡迎來訪，登入會員後可參加投票';
         }
