@@ -4,7 +4,6 @@
         <div class="menu">
             <ul>
                 <li><a href="./vote_center.php">投票列表</a></li>
-                <li><a href="./vote_center.php?kind=activ">投票分類查詢</a></li>
                 <li><a href="./vote_center.php?joined=activ">已參加主題</a></li>
                 <li><a href="./vote_center.php?create=activ">新增投票主題</a></li>
                 <li><a href="./vote_center.php?delete=activ">刪除投票主題</a></li>
@@ -20,15 +19,13 @@
             </div>
 
             <?php
-            if (isset($_GET['kind'])) {
-                include './back/section_vote_center_kind.php';
-            } else if (isset($_GET['joined'])) {
+            if (isset($_GET['joined'])) {
                 include './back/section_vote_center_joined.php';
-            } else if(isset($_GET['create'])){
+            } else if (isset($_GET['create'])) {
                 include './back/section_vote_center_create.php';
-            } else if(isset($_GET['delete'])){
+            } else if (isset($_GET['delete'])) {
                 include './back/section_vote_center_delete.php';
-            } else{
+            } else {
                 include './back/section_vote_center_default.php';
             }
             ?>

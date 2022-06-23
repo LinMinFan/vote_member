@@ -29,10 +29,7 @@ $dateall = find('vote_member_users', $_SESSION['id']);
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/vote_center.css">
-    <link rel="stylesheet" href="./css/vote_center_default.css">
-    <link rel="stylesheet" href="./css/vote_center_joined.css">
-    <link rel="stylesheet" href="./css/vote_center_create.css">
-    <link rel="stylesheet" href="./css/vote_center_delete.css">
+    <link rel="stylesheet" href="./css/vote_star.css">
     <link rel="stylesheet" href="./css/header.css">
     <link rel="stylesheet" href="./css/footer.css">
 
@@ -49,7 +46,7 @@ $dateall = find('vote_member_users', $_SESSION['id']);
     </div>
     <div class="section">
         <?php
-        include "./layout/section_vote_center.php";
+        include './back/section_vote_star.php';
         ?>
     </div>
     <div class="footer">

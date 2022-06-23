@@ -9,7 +9,7 @@
     ?>
         <div class='card'>
             <div class='type'>
-                <?= $type[$type_id - 1]['name']; ?>
+                <?= $types[$type_id - 1]['name']; ?>
             </div>
             <div class='subject'>
                 <div class='title'>
@@ -27,7 +27,7 @@
                 if (isset($_SESSION['user'])) {
                 ?>
                     <div class='buttom'>
-                        <a href=''>參加投票</a>
+                        <a href='./vote_star.php?subject=<?= $value['id']; ?>'>參加投票</a>
                         <a href=''>查看結果</a>
                     </div>
                 <?php

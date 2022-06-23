@@ -134,7 +134,7 @@ function find($table, $arg)
         
         $sql .= " `id`='$arg'";
     }
-    
+
     return $pdo->query($sql)->fetch(PDO::FETCH_ASSOC);
 }
 

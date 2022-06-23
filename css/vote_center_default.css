@@ -7,8 +7,59 @@
     flex-wrap: wrap;
     padding: 10px 5px;
 }
+
+/* 分類選單 */
+.select {
+    position: fixed;
+    top: 15px;
+    right: 7%;
+    width: 50px;
+    height: 30px;
+    text-align: center;
+    background: #00000025;
+    border-radius: 5px;
+    transition: 0.5s;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.select:hover {
+    height: 215px;
+}
+
+.select .selectText {
+    color: #00447b;
+    font-size: 18px;
+    text-align: center;
+    font-weight: bold;
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+}
+
+.select li {
+    list-style: none;
+    font-size: 14px;
+    padding: 3px 0;
+}
+
+.select li a {
+    display: block;
+    height: 20px;
+    width: 50px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #00447b;
+    transition: 0.5s;
+}
+
+.select li a:hover {
+    background: #00447b;
+    color: #c8c8c8;
+}
+
 /* 排序按鈕 */
-.order{
+.order {
     position: fixed;
     top: 15px;
     right: 3%;
@@ -19,17 +70,20 @@
     height: 30px;
     text-align: center;
 }
-.order a{
+
+.order a {
     display: inline-block;
     width: 30px;
     height: 30px;
     text-decoration: none;
     color: #00447b;
 }
-.order a:hover{
+
+.order a:hover {
     background: #00447b;
     color: #c8c8c8;
 }
+
 /* 投票項目 */
 .card {
     position: relative;
@@ -38,13 +92,14 @@
     border-radius: 20px;
     box-shadow: 0px 10px 30px #d5d5d5;
     transition: 0.5s;
-    background:linear-gradient(#3DFFEF,#DC40FF);
+    background: linear-gradient(#3DFFEF, #DC40FF);
     margin: 20px 30px;
 }
 
 .card:hover {
     height: 175px;
 }
+
 /* 投票類別 */
 .type {
     position: absolute;
@@ -59,7 +114,7 @@
     border-radius: 5px;
     box-shadow: 0 5px 15px #a5a5a5;
     transition: 0.5s;
-    background:linear-gradient(#3DFFEF,#DC40FF);
+    background: linear-gradient(#3DFFEF, #DC40FF);
 }
 
 .card:hover .type {
@@ -69,6 +124,7 @@
     height: 35px;
     line-height: 35px;
 }
+
 /* 投票主題 */
 .subject {
     width: 100%;
@@ -84,6 +140,7 @@
     transform: translateY(15px);
     height: 145px;
 }
+
 /* 主題文字 */
 .subject .title {
     width: 100%;
@@ -95,6 +152,7 @@
     justify-content: center;
     align-items: center;
 }
+
 /* 主題日期 */
 .subject .date {
     font-size: 14px;
@@ -102,14 +160,16 @@
     font-weight: bold;
     color: #FF4C89;
 }
+
 /* 主題按鈕 */
 
-.subject .buttom{
+.subject .buttom {
     padding: 5px 10px;
     display: flex;
     justify-content: space-around;
 }
-.subject .buttom a{
+
+.subject .buttom a {
     font-size: 14px;
     text-decoration: none;
     display: inline-block;
@@ -120,10 +180,12 @@
     background: #0000005a;
     border-radius: 5px;
 }
-.subject .buttom a:hover{
+
+.subject .buttom a:hover {
     color: #49aeff;
     background: #0000008a;
 }
+
 .page {
     position: fixed;
     bottom: 15px;
@@ -134,7 +196,8 @@
     height: 25px;
     text-align: center;
 }
-.page a{
+
+.page a {
     display: inline-block;
     width: 25px;
     height: 25px;
@@ -142,7 +205,8 @@
     text-decoration: none;
     color: #00447b;
 }
-.page a:hover{
+
+.page a:hover {
     background: #00447b;
     color: #c8c8c8;
 }

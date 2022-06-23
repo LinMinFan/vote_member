@@ -2,9 +2,9 @@
 //連線資料庫讀取全部投票主題
 include "./api/function.php";
 $subjects = all('`vote_member_subjects`');
-$type = all('`vote_member_type`');
+$types = all('`vote_member_type`');
 //dd($subjects);
-//dd($type);
+//dd($types);
 //檢視若有登入就載入暱稱
 if (isset($_SESSION['user'])) {
     $dateall = find('vote_member_users', $_SESSION['id']);
