@@ -168,13 +168,16 @@ function math($table, $math, $col, ...$arg)
     
     $sql = "SELECT $math(`$col`) FROM $table ";
     
+    //有帶陣列參數,每筆陣列不須全部比對只要比對一筆,故抓第一筆資料通常為id
     if (!empty($arg[0])) {
         
+        //若多筆陣列取每筆第一項資料為比對條件
         foreach ($arg[0] as $key => $value) {
             
             $tmp[] = "`$key`='$value'";
         }
         
+        //多筆都須符合條件故用AND隔開參數放入語法
         $sql .= " WHERE " . implode(" AND ", $tmp);
     }
     
@@ -183,29 +186,36 @@ function math($table, $math, $col, ...$arg)
     return $pdo->query($sql)->fetchColumn();
 }
 
-//更新資料
+//更新 / 新增資料,更新與新增帶入的陣列只有已有id及未有id差別
 function  save($table, $arg)
 {
     $pdo = pdo();
     $sql = '';
+    
+    //陣列內有id時則使用更新語法
     if (isset($arg['id'])) {
         //update
 
         foreach ($arg as $key => $value) {
 
+            //id欄位不更新故須利用判斷式跳過
             if ($key != 'id') {
 
                 $tmp[] = "`$key`='$value'";
             }
         }
-        //建立更新的sql語法
+        //建立更新的sql語法UPDATE $table SET `$key`='$value'  WHERE `id` = 'id'
         $sql .= "UPDATE $table SET " . implode(" , ", $tmp) . " WHERE `id`='{$arg['id']}'";
     } else {
         //insert
-        $cols = implode("`,`", array_keys($arg)); //關聯式索引key = 資料表欄位
-        $values = implode("','", $arg); //values = 填入欄位的值
 
-        //建立新增的sql語法
+        //關聯式索引key = 資料表欄位
+        $cols = implode("`,`", array_keys($arg));
+
+        //values = 填入欄位的值
+        $values = implode("','", $arg);
+
+        //建立新增的sql語法INSERT INTO $table (`$col1`,`$col2`,`$col3`) VALUES('$value1','$value1','$value1')"
         $sql = "INSERT INTO $table (`$cols`) VALUES('$values')";
     }
     //echo $sql;

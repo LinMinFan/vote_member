@@ -1,21 +1,12 @@
 <?php
 //連線資料庫讀取全部投票主題選項資料
 include "./api/function.php";
-$subjects = all('`vote_member_subjects`');
-$types = all('`vote_member_type`');
-$options = all('`vote_member_options`');
-$logs = all('`vote_member_log`');
-//若無session直接導向登入頁不停留此頁
-if (!isset($_SESSION['user'])) {
-    //header('location:/login.php');
-    to('login.php');
+$pdo = pdo();
+if (isset($_SESSION['user'])) {
+    $dateall = find('vote_member_users', $_SESSION['id']);
 }
-//以登入的session抓取會員資料
-//$sql ="SELECT * FROM `vote_member_users` WHERE `account`='{$_SESSION['user']}'";
-//$dateall = $pdo->query($sql)->fetch(PDO::FETCH_ASSOC);
-//$date = ['account' => $_SESSION['user']];
-//$dateall = all('vote_member_users', $date);
-$dateall = find('vote_member_users', $_SESSION['id']);
+//結果頁無須驗證登入
+//結果頁不須載入帳號資料
 
 ?>
 <!DOCTYPE html>
@@ -46,7 +37,7 @@ $dateall = find('vote_member_users', $_SESSION['id']);
     </div>
     <div class="section">
         <?php
-        echo '建構中';
+        include './back/section_vote_result.php';
         ?>
     </div>
     <div class="footer">
