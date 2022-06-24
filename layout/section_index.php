@@ -6,6 +6,7 @@
         $type_id = $value['type_id'];   //分類
         $start = $value['start'];   //開始時間
         $end = $value['end'];   //結束時間
+        $endtime = date(strtotime($end));   //結束秒數
     ?>
         <div class='card'>
             <div class='type'>
@@ -22,21 +23,25 @@
                         <?= $start . " ~ " . $end; ?>
                     </span>
                 </div>
-                <!-- 判斷是否有登入決定功能鍵連結 -->
                 <?php
-                if (isset($_SESSION['user'])) {
+                if ($today > $endtime) {
+                ?>
+                    <div class='buttom'>
+                        <a href='./vote_result.php?subject=<?= $value['id']; ?>'>參加投票</a>
+                        <a href='./vote_result.php?subject=<?= $value['id']; ?>'>查看結果</a>
+                    </div>
+                    <div class="vote_end">
+                        <h3>已結束</h3>
+                    </div>
+
+                <?php
+                } else {
                 ?>
                     <div class='buttom'>
                         <a href='./vote_star.php?subject=<?= $value['id']; ?>'>參加投票</a>
                         <a href='./vote_result.php?subject=<?= $value['id']; ?>'>查看結果</a>
                     </div>
-                <?php
-                } else {
-                ?>
-                    <div class='buttom'>
-                        <a href='./login.php'>參加投票</a>
-                        <a href='./vote_result.php?subject=<?= $value['id']; ?>'>查看結果</a>
-                    </div>
+
                 <?php
                 }
                 ?>

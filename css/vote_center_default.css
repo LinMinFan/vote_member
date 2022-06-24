@@ -186,6 +186,16 @@
     background: #0000008a;
 }
 
+/* 投票結束文字 */
+.vote_end{
+    position: absolute;
+    color: red;
+    top: 40%;
+    left: 35%;
+    border: 3px solid red;
+    transform: rotate(-30deg);
+}
+/* 分頁目錄 */
 .page {
     position: fixed;
     bottom: 15px;

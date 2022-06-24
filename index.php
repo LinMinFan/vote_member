@@ -1,8 +1,12 @@
 <?php
 //連線資料庫讀取全部投票主題
 include "./api/function.php";
-$subjects = all('`vote_member_subjects`');
-$types = all('`vote_member_type`');
+$subjects = all('vote_member_subjects');
+$types = all('vote_member_type');
+
+//定義今日秒數
+$today = date(strtotime('today'));
+
 //dd($subjects);
 //dd($types);
 //檢視若有登入就載入暱稱

@@ -9,7 +9,7 @@ $pageNow = $_GET['p'];  //當前頁
 $pageBack = $pageNow - 1;   //前一頁 if 前一頁 == 0 前一頁 = 1
 $pagefront = $pageNow + 1;   //後一頁 if 後一頁 == end 後一頁 = end
 ?>
-<!-- 使用foreach將資料表數值帶入下幫保留原始html參考 -->
+<!-- 使用foreach將資料表數值帶入 -->
 <div class='container'>
     <!-- 分類選單 -->
     <?php
@@ -22,7 +22,7 @@ $pagefront = $pageNow + 1;   //後一頁 if 後一頁 == end 後一頁 = end
             foreach ($types as $kind) {
             ?>
 
-            <li><a href="./vote_center.php?p=1&o=desc&t=<?= $kind['id']; ?>"><?= $kind['name']; ?></a></li>
+                <li><a href="./vote_center.php?p=1&o=desc&t=<?= $kind['id']; ?>"><?= $kind['name']; ?></a></li>
             <?php
             }
             ?>
@@ -43,6 +43,7 @@ $pagefront = $pageNow + 1;   //後一頁 if 後一頁 == end 後一頁 = end
         $type_id = $value['type_id'];   //分類
         $start = $value['start'];   //開始時間
         $end = $value['end'];   //結束時間
+        $endtime = date(strtotime($end));   //結束秒數
     ?>
         <div class='card'>
             <div class='type'>
@@ -59,10 +60,28 @@ $pagefront = $pageNow + 1;   //後一頁 if 後一頁 == end 後一頁 = end
                         <?= $start . " ~ " . $end; ?>
                     </span>
                 </div>
-                <div class='buttom'>
-                    <a href='./vote_star.php?subject=<?= $value['id']; ?>'>參加投票</a>
-                    <a href='./vote_result.php?subject=<?= $value['id']; ?>'>查看結果</a>
-                </div>
+                <?php
+                if ($today > $endtime) {
+                ?>
+                    <div class='buttom'>
+                        <a href='./vote_result.php?subject=<?= $value['id']; ?>'>參加投票</a>
+                        <a href='./vote_result.php?subject=<?= $value['id']; ?>'>查看結果</a>
+                    </div>
+                    <div class="vote_end">
+                        <h3>已結束</h3>
+                    </div>
+
+                <?php
+                } else {
+                ?>
+                    <div class='buttom'>
+                        <a href='./vote_star.php?subject=<?= $value['id']; ?>'>參加投票</a>
+                        <a href='./vote_result.php?subject=<?= $value['id']; ?>'>查看結果</a>
+                    </div>
+
+                <?php
+                }
+                ?>
             </div>
         </div>
     <?php
