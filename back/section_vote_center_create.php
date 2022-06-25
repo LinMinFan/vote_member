@@ -96,3 +96,13 @@
         }
     }
 </script>
+<?php
+if (isset($_GET['error'])) {
+    $alart = $_GET['error'];
+    echo "<script>
+    
+      alert('$alart');
+    
+    </script>";
+}
+?>

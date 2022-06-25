@@ -2,11 +2,20 @@
 //建立資料庫連線以include引入
 include "./function.php";
 $pdo=pdo();
+
 //接收來自表單傳來的投票主題文字內容
 $subject=$_POST['subject'];
 $type_id=$_POST['type_id'];
 $admin=$_SESSION['id'] ;
 $multiple=$_POST['multiple'] ;
+
+//先做主題比對如果主題已存在則返回新增投票1存在0不存在
+$chksql = "SELECT COUNT(*) FROM `vote_member_subjects` WHERE `subject` = '$subject'";
+$chk_subject = $pdo->query($chksql)->fetchColumn();
+if ($chk_subject > 0) {
+    to('../vote_center.php?create=activ&error=主題已存在');
+}else{
+
 //開始日期需大於今日如果小於今日 以今日為開始日
 $start=$_POST['start'] ; //date("Y-m-d")
 $starttime = date(strtotime($start));
@@ -79,3 +88,6 @@ if(isset($_POST['choice'])){
 
 //使用to()函式來取代header
 to('../vote_center.php');
+
+}
+?>

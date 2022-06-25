@@ -52,3 +52,4 @@ if (isset($_POST['opt'])) {
 
 //header('../vote_result.php?subject_id=$subject_id');
 to("../vote_result.php?subject=$subject_id");
+?>
