@@ -179,7 +179,7 @@
 |名稱|類型|屬性|預設值|額外資訊|備註|
 |--|--|--|--|--|--|
 |id|int(11)|UNSIGNED|無|AI|序號|
-|subject|varchar(40)|--|無|--|投票主題|
+|subject|varchar(30)|--|無|--|投票主題|
 |type_id|int(11)|--|無|--|主題類別|
 |admin|int(11)|--|無|--|發起人id|
 |multiple|boolean(1)|--|無|--|單/複選|
@@ -192,7 +192,7 @@
 |--|--|--|--|--|--|
 |id|int(11)|UNSIGNED|無|AI|序號|
 |subject_id|int(11)|--|無|--|投票主題id|
-|choice|varchar(128)|--|無|--|選項內容|
+|choice|varchar(20)|--|無|--|選項內容|
 
 ### 投票主題紀錄:vote_member_log
 
@@ -214,4 +214,4 @@
 |名稱|類型|屬性|預設值|額外資訊|備註|
 |--|--|--|--|--|--|
 |id|int(11)|UNSIGNED|無|AI|序號|
-|name|varchar(3)|--|無|--|分類名稱|
+|name|varchar(2)|--|無|--|分類名稱|

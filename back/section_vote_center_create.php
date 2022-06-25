@@ -3,7 +3,7 @@
         <form action="./api/add_vote.php" method="post">
             <div class="inputbox submajor">
                 <label class="subLb" for="">投票主題：</label>
-                <input class="subjectVote" type="text" name="subject" required>
+                <input class="subjectVote" type="text" name="subject" maxlength="30" required>
             </div>
             <!-- 主題分類 -->
             <div class="type_id">
@@ -34,9 +34,9 @@
                 <label>複選</label>
             </div>
             <div class="optionLimit" id="optionLimit">
-                <label class="opt">選項1:</label><input type="text" name="choice[]" required>
-                <label class="opt">選項2:</label><input type="text" name="choice[]" required>
-                <label class="opt">選項3:</label><input type="text" name="choice[]">
+                <label class="opt">選項1:</label><input type="text" name="choice[]" maxlength="20" required>
+                <label class="opt">選項2:</label><input type="text" name="choice[]" maxlength="20" required>
+                <label class="opt">選項3:</label><input type="text" name="choice[]" maxlength="20">
             </div>
             <div class="inputbox opbth">
                 <input type="submit" name="" id="" value="送出">
@@ -65,6 +65,7 @@
         para2.setAttribute('type', 'text');
         para2.setAttribute('name', 'choice[]');
         para2.setAttribute("class", "opt")
+        para2.setAttribute("maxlength", "20")
         // 建立lable文字內容
         let node = document.createTextNode(`選項${total.length + 1}:`);
 

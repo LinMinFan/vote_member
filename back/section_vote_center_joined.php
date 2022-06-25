@@ -27,21 +27,26 @@
         </a> -->
     </div>
     <?php
-    //比對已投票紀錄將投票主題顯示在此
-    //sql語法SELECT * FROM `vote_member_log` WHERE `user_id` = $_SESSION['id'];
-    $logsql = "SELECT * FROM `vote_member_log` WHERE `user_id` = " . $_SESSION['id'];
+    //比對已投票紀錄將投票主題顯示在使用連表查詢
+    //SELECT `vote_member_subjects` . * , `vote_member_log` . `user_id`
+    //FROM `vote_member_subjects`,`vote_member_log` 
+    //WHERE `vote_member_subjects` . `id` = `vote_member_log` . `subject_id` && `vote_member_log` . `user_id` = session['id'] ORDER BY `id` ASC
+    $user_id = $_SESSION['id'];
+    $logsql = "SELECT `vote_member_subjects` . * , `vote_member_log` . `user_id` 
+    FROM `vote_member_subjects`,`vote_member_log` 
+    WHERE `vote_member_subjects` . `id` = `vote_member_log` . `subject_id` && `vote_member_log` . `user_id` = $user_id 
+    ORDER BY `id` ASC";
+    
     $subject_log = $pdo->query($logsql)->fetchAll(PDO::FETCH_ASSOC);
 
-    //用符合條件的subject_id再帶入vote_member_subjects資料表查找印出
-    //語法SELECT * FROM `vote_member_subjects` WHERE `id` = $log['subject_id']
+    //需使用參數 id subject type_id start end
+    
     foreach ($subject_log as $log) {
-        $logwhere = ['id' => $log['subject_id']];
-        $logsubject = all('vote_member_subjects', $logwhere);
-        foreach ($logsubject as $value) {
-            $subject = $value['subject'];   //主題
-            $type_id = $value['type_id'];   //分類
-            $start = $value['start'];   //開始時間
-            $end = $value['end'];   //結束時間
+            $subject_id = $log['id'];     //subject_id
+            $subject = $log['subject'];   //主題
+            $type_id = $log['type_id'];   //分類
+            $start = $log['start'];   //開始時間
+            $end = $log['end'];   //結束時間
             $endtime = date(strtotime($end));   //結束秒數
     ?>
             <div class='card'>
@@ -63,8 +68,8 @@
                     if ($today > $endtime) {
                     ?>
                         <div class='buttom'>
-                            <a href='./vote_result.php?subject=<?= $value['id']; ?>'>參加投票</a>
-                            <a href='./vote_result.php?subject=<?= $value['id']; ?>'>查看結果</a>
+                            <a href='./vote_result.php?subject=<?= $subject_id; ?>'>參加投票</a>
+                            <a href='./vote_result.php?subject=<?= $subject_id; ?>'>查看結果</a>
                         </div>
                         <div class="vote_end">
                             <h3>已結束</h3>
@@ -74,8 +79,8 @@
                     } else {
                     ?>
                         <div class='buttom'>
-                            <a href='./vote_star.php?subject=<?= $value['id']; ?>'>參加投票</a>
-                            <a href='./vote_result.php?subject=<?= $value['id']; ?>'>查看結果</a>
+                            <a href='./vote_result.php?subject=<?= $subject_id; ?>'>參加投票</a>
+                            <a href='./vote_result.php?subject=<?= $subject_id; ?>'>查看結果</a>
                         </div>
 
                     <?php
@@ -85,9 +90,8 @@
                 </div>
             </div>
     <?php
-        }
+        
     }
-    exit();
     ?>
 
     <!-- 分頁標籤 -->

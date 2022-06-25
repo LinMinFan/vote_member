@@ -2,6 +2,14 @@
 //連線資料庫讀取全部投票主題選項資料
 include "./api/function.php";
 $pdo = pdo();
+
+//若無session直接導向登入頁不停留此頁
+if (!isset($_SESSION['user'])) {
+    //header('location:/login.php');
+    to('login.php');
+}
+
+//抓取資料
 $subjects = all('vote_member_subjects');
 $types = all('vote_member_type');
 $options = all('vote_member_options');
@@ -10,11 +18,6 @@ $logs = all('vote_member_log');
 //定義今日秒數
 $today = date(strtotime('today'));
 
-//若無session直接導向登入頁不停留此頁
-if (!isset($_SESSION['user'])) {
-    //header('location:/login.php');
-    to('login.php');
-}
 //以登入的session抓取會員資料
 //$sql ="SELECT * FROM `vote_member_users` WHERE `account`='{$_SESSION['user']}'";
 //$dateall = $pdo->query($sql)->fetch(PDO::FETCH_ASSOC);
