@@ -10,10 +10,7 @@ if (!isset($_SESSION['user'])) {
 }
 
 //抓取資料
-$subjects = all('vote_member_subjects');
 $types = all('vote_member_type');
-$options = all('vote_member_options');
-$logs = all('vote_member_log');
 
 //定義今日秒數
 $today = date(strtotime('today'));
