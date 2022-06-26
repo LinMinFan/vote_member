@@ -9,7 +9,7 @@ if (!isset($_GET['p']) || !isset($_GET['o']) || !isset($_GET['t'])) {
 //分頁所需參數需求為每頁顯示8筆
 $sheet = 8;
 $order = $_GET['o'];    //排序
-$ordersql = ($_GET['o'] == 'asc') ? 'ORDER BY `end` ASC' : 'ORDER BY `end` DESC';
+$ordersql = ($order == 'asc') ? 'ORDER BY `end` ASC' : 'ORDER BY `end` DESC';
 $pageNow = $_GET['p'];  //當前頁
 $limitstrt =  ($pageNow - 1) * $sheet; //計算每頁資料由第幾筆資料開始取0 = id 1
 $limitsql = "limit $limitstrt,$sheet"; //分頁條件語法
@@ -65,7 +65,7 @@ $pagefront = ($pageNow == $pageEnd) ? $pageEnd : $pageNow + 1;   //後一頁 if 
     <!-- 排序按鈕 -->
     <div class="order">
         <?php
-        if ($_GET['o'] == 'desc') {
+        if ($order == 'desc') {
         ?>
             <a href="./vote_center.php?p=<?= $pageNow; ?>&o=asc&t=<?= $defaultT; ?>">
                 <i class="fa-solid fa-arrow-up-short-wide"></i>

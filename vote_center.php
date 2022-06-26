@@ -35,6 +35,7 @@ $dateall = find('vote_member_users', $_SESSION['id']);
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/vote_center.css">
     <link rel="stylesheet" href="./css/vote_center_default.css">
+    <link rel="stylesheet" href="./css/vote_center_search.css">
     <link rel="stylesheet" href="./css/vote_center_joined.css">
     <link rel="stylesheet" href="./css/vote_center_create.css">
     <link rel="stylesheet" href="./css/vote_center_delete.css">

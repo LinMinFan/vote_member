@@ -109,7 +109,7 @@ $pagefront = ($pageNow == $pageEnd) ? $pageEnd : $pageNow + 1;   //後一頁 if 
                     <!-- 刪除按鈕 -->
                     <div class="confirm">
                         <!-- 雙重確認刪除主題 -->
-                        <a class="delete" id="delete" href="./vote_center.php?delete=activ&confirm=true&subject=<?= $subject_id; ?>" style="--clr:#ff1867"><span>刪除主題</span><i></i></a>
+                        <a class="delete" id="delete" href="./vote_center.php?delete=activ&p=<?= $pageBack; ?>&o=<?= $order; ?>&t=<?= $defaultT; ?>&confirm=true&subject=<?= $subject_id; ?>" style="--clr:#ff1867"><span>刪除主題</span><i></i></a>
                         <!-- 先點擊確認再彈跳視窗確認才刪除主題 -->
                     </div>
 
@@ -123,7 +123,7 @@ $pagefront = ($pageNow == $pageEnd) ? $pageEnd : $pageNow + 1;   //後一頁 if 
                     <!-- 刪除按鈕 -->
                     <div class="confirm">
                         <!-- 雙重確認刪除主題 -->
-                        <a class="delete" id="delete" href="./vote_center.php?delete=activ&confirm=true&subject=<?= $subject_id; ?>" style="--clr:#ff1867"><span>刪除主題</span><i></i></a>
+                        <a class="delete" id="delete" href="./vote_center.php?delete=activ&p=<?= $pageBack; ?>&o=<?= $order; ?>&t=<?= $defaultT; ?>&confirm=true&subject=<?= $subject_id; ?>" style="--clr:#ff1867"><span>刪除主題</span><i></i></a>
                         <!-- 先點擊確認再彈跳視窗確認才刪除主題 -->
                     </div>
 
