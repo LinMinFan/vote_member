@@ -15,10 +15,6 @@
         </div>
         <!-- 頁面內容 -->
         <div class="vote">
-            <div class="information">
-                <h3>投票中心</h3>
-            </div>
-
             <?php
             if (isset($_GET['search'])) {
                 include './back/section_vote_center_search.php';

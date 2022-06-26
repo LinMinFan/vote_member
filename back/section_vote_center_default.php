@@ -29,12 +29,12 @@ $vote_subjects = $pdo->query($allsql)->fetchAll(PDO::FETCH_ASSOC);
 $subjects = all('vote_member_subjects');
 //計算分類總數用
 $typewhere = ['type_id' => $defaultT];
-$typesum = all('vote_member_subjects',$typewhere);
+$typesum = all('vote_member_subjects', $typewhere);
 //dd($typesum);
 //dd($vote_subjects);
 //計算總頁數 = ceil(總比數 / 每頁顯示筆數)
 //抓取筆數
-$pageSum = ($defaultT == 0)?ceil(count($subjects) / $sheet):ceil(count($typesum) / $sheet);  //總頁數
+$pageSum = ($defaultT == 0) ? ceil(count($subjects) / $sheet) : ceil(count($typesum) / $sheet);  //總頁數
 //dd($vote_subjects);
 //echo $pageSum;
 $pageStart = 1; //第一頁 
@@ -42,7 +42,9 @@ $pageEnd = $pageSum;  //最後一頁就是總頁數
 $pageBack = ($pageNow == 1) ? $pageNow : $pageNow - 1;   //前一頁 if 前一頁 == 0 前一頁 = 1
 $pagefront = ($pageNow == $pageEnd) ? $pageEnd : $pageNow + 1;   //後一頁 if 後一頁 == end 後一頁 = end
 ?>
-
+<div class="information">
+    <h3>投票列表</h3>
+</div>
 <!-- 使用foreach將資料表數值帶入 -->
 <div class='container'>
     <!-- 分類選單 -->
@@ -145,30 +147,30 @@ $pagefront = ($pageNow == $pageEnd) ? $pageEnd : $pageNow + 1;   //後一頁 if 
         <?php
         } else if ($pageSum == 2) {
         ?>
-            <a class="<?=($pageNow == $pageStart)?"pageNow":"";?>" href="./vote_center.php?p=<?= $pageStart; ?>&o=<?= $order; ?>&t=<?= $defaultT; ?>"><?= $pageStart; ?></a>
+            <a class="<?= ($pageNow == $pageStart) ? "pageNow" : ""; ?>" href="./vote_center.php?p=<?= $pageStart; ?>&o=<?= $order; ?>&t=<?= $defaultT; ?>"><?= $pageStart; ?></a>
             <!-- 固定最後一頁 -->
-            <a class="<?=($pageNow == $pageEnd)?"pageNow":"";?>" href="./vote_center.php?p=<?= $pageEnd; ?>&o=<?= $order; ?>&t=<?= $defaultT; ?>"><?= $pageEnd; ?></a>
+            <a class="<?= ($pageNow == $pageEnd) ? "pageNow" : ""; ?>" href="./vote_center.php?p=<?= $pageEnd; ?>&o=<?= $order; ?>&t=<?= $defaultT; ?>"><?= $pageEnd; ?></a>
         <?php
         } else if ($pageSum == 3) {
         ?>
-            <a class="<?=($pageNow == $pageStart)?"pageNow":"";?>" href="./vote_center.php?p=<?= $pageStart; ?>&o=<?= $order; ?>&t=<?= $defaultT; ?>"><?= $pageStart; ?></a>
-            <a class="<?=($pageNow == ($pageStart+1))?"pageNow":"";?>" href="./vote_center.php?p=<?= ($pageStart + 1); ?>&o=<?= $order; ?>&t=<?= $defaultT; ?>"><?= ($pageStart + 1); ?></a>
-            <a class="<?=($pageNow == $pageEnd)?"pageNow":"";?>" href="./vote_center.php?p=<?= $pageEnd; ?>&o=<?= $order; ?>&t=<?= $defaultT; ?>"><?= $pageEnd; ?></a>
+            <a class="<?= ($pageNow == $pageStart) ? "pageNow" : ""; ?>" href="./vote_center.php?p=<?= $pageStart; ?>&o=<?= $order; ?>&t=<?= $defaultT; ?>"><?= $pageStart; ?></a>
+            <a class="<?= ($pageNow == ($pageStart + 1)) ? "pageNow" : ""; ?>" href="./vote_center.php?p=<?= ($pageStart + 1); ?>&o=<?= $order; ?>&t=<?= $defaultT; ?>"><?= ($pageStart + 1); ?></a>
+            <a class="<?= ($pageNow == $pageEnd) ? "pageNow" : ""; ?>" href="./vote_center.php?p=<?= $pageEnd; ?>&o=<?= $order; ?>&t=<?= $defaultT; ?>"><?= $pageEnd; ?></a>
         <?php
         } else if ($pageSum == 4) {
         ?>
-            <a class="<?=($pageNow == $pageStart)?"pageNow":"";?>" href="./vote_center.php?p=<?= $pageStart; ?>&o=<?= $order; ?>&t=<?= $defaultT; ?>"><?= $pageStart; ?></a>
-            <a class="<?=($pageNow == ($pageStart+1))?"pageNow":"";?>" href="./vote_center.php?p=<?= ($pageStart + 1); ?>&o=<?= $order; ?>&t=<?= $defaultT; ?>"><?= ($pageStart + 1); ?></a>
-            <a class="<?=($pageNow == ($pageStart+2))?"pageNow":"";?>" href="./vote_center.php?p=<?= ($pageStart + 2); ?>&o=<?= $order; ?>&t=<?= $defaultT; ?>"><?= ($pageStart + 2); ?></a>
-            <a class="<?=($pageNow == $pageEnd)?"pageNow":"";?>" href="./vote_center.php?p=<?= $pageEnd; ?>&o=<?= $order; ?>&t=<?= $defaultT; ?>"><?= $pageEnd; ?></a>
+            <a class="<?= ($pageNow == $pageStart) ? "pageNow" : ""; ?>" href="./vote_center.php?p=<?= $pageStart; ?>&o=<?= $order; ?>&t=<?= $defaultT; ?>"><?= $pageStart; ?></a>
+            <a class="<?= ($pageNow == ($pageStart + 1)) ? "pageNow" : ""; ?>" href="./vote_center.php?p=<?= ($pageStart + 1); ?>&o=<?= $order; ?>&t=<?= $defaultT; ?>"><?= ($pageStart + 1); ?></a>
+            <a class="<?= ($pageNow == ($pageStart + 2)) ? "pageNow" : ""; ?>" href="./vote_center.php?p=<?= ($pageStart + 2); ?>&o=<?= $order; ?>&t=<?= $defaultT; ?>"><?= ($pageStart + 2); ?></a>
+            <a class="<?= ($pageNow == $pageEnd) ? "pageNow" : ""; ?>" href="./vote_center.php?p=<?= $pageEnd; ?>&o=<?= $order; ?>&t=<?= $defaultT; ?>"><?= $pageEnd; ?></a>
         <?php
         } else if ($pageSum == 5) {
         ?>
-            <a class="<?=($pageNow == $pageStart)?"pageNow":"";?>" href="./vote_center.php?p=<?= $pageStart; ?>&o=<?= $order; ?>&t=<?= $defaultT; ?>"><?= $pageStart; ?></a>
-            <a class="<?=($pageNow == ($pageStart+1))?"pageNow":"";?>" href="./vote_center.php?p=<?= ($pageStart + 1); ?>&o=<?= $order; ?>&t=<?= $defaultT; ?>"><?= ($pageStart + 1); ?></a>
-            <a class="<?=($pageNow == ($pageStart+2))?"pageNow":"";?>" href="./vote_center.php?p=<?= ($pageStart + 2); ?>&o=<?= $order; ?>&t=<?= $defaultT; ?>"><?= ($pageStart + 2); ?></a>
-            <a class="<?=($pageNow == ($pageStart+3))?"pageNow":"";?>" href="./vote_center.php?p=<?= ($pageStart + 3); ?>&o=<?= $order; ?>&t=<?= $defaultT; ?>"><?= ($pageStart + 3); ?></a>
-            <a class="<?=($pageNow == $pageEnd)?"pageNow":"";?>" href="./vote_center.php?p=<?= $pageEnd; ?>&o=<?= $order; ?>&t=<?= $defaultT; ?>"><?= $pageEnd; ?></a>
+            <a class="<?= ($pageNow == $pageStart) ? "pageNow" : ""; ?>" href="./vote_center.php?p=<?= $pageStart; ?>&o=<?= $order; ?>&t=<?= $defaultT; ?>"><?= $pageStart; ?></a>
+            <a class="<?= ($pageNow == ($pageStart + 1)) ? "pageNow" : ""; ?>" href="./vote_center.php?p=<?= ($pageStart + 1); ?>&o=<?= $order; ?>&t=<?= $defaultT; ?>"><?= ($pageStart + 1); ?></a>
+            <a class="<?= ($pageNow == ($pageStart + 2)) ? "pageNow" : ""; ?>" href="./vote_center.php?p=<?= ($pageStart + 2); ?>&o=<?= $order; ?>&t=<?= $defaultT; ?>"><?= ($pageStart + 2); ?></a>
+            <a class="<?= ($pageNow == ($pageStart + 3)) ? "pageNow" : ""; ?>" href="./vote_center.php?p=<?= ($pageStart + 3); ?>&o=<?= $order; ?>&t=<?= $defaultT; ?>"><?= ($pageStart + 3); ?></a>
+            <a class="<?= ($pageNow == $pageEnd) ? "pageNow" : ""; ?>" href="./vote_center.php?p=<?= $pageEnd; ?>&o=<?= $order; ?>&t=<?= $defaultT; ?>"><?= $pageEnd; ?></a>
         <?php
         } else if ($pageSum > 5 && $pageNow == $pageStart) {
         ?>

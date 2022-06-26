@@ -1,3 +1,6 @@
+<div class="information">
+    <h3>新增主題</h3>
+</div>
 <div class="create">
     <div class="createForm">
         <form action="./api/add_vote.php" method="post">
