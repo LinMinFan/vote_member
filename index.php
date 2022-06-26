@@ -1,7 +1,7 @@
 <?php
 //連線資料庫讀取全部投票主題
 include "./api/function.php";
-$subjects = all('vote_member_subjects');
+$pdo = pdo();
 $types = all('vote_member_type');
 
 //定義今日秒數

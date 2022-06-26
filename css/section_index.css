@@ -1,11 +1,24 @@
+.index{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.information {
+    height: 45px;
+    width: 100%;
+    color: #ffffff;
+    padding: 10px 0;
+    text-align: center;
+    letter-spacing: 10px;
+}
 /* 投票列表 */
 .container {
-    max-width: 80%;
-    min-height: 80vh;
+    max-width: 100%;
+    min-height: calc(40vh - 45px);
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    padding: 30px 5px;
+    padding: 10px 5px;
 }
 
 /* 投票項目 */
@@ -118,4 +131,16 @@
 .subject .buttom a:hover {
     color: #49aeff;
     background: #0000008a;
+}
+.advertise{
+    width: 100%;
+    min-height: calc(40vh - 10px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.advertise .adbar{
+    width: 500px;
+    min-height: 250px;
+    background: #d5d5d5;
 }
