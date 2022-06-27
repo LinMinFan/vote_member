@@ -52,7 +52,7 @@ $pagefront = ($pageNow == $pageEnd) ? $pageEnd : $pageNow + 1;   //後一頁 if 
         <input type="text" name="codition" required>
     </div>
     <div class="searc_button">
-    <input class="search_submit" type="submit" value="送出">
+    <button class="search_submit" type="submit"><i class='fa-solid fa-magnifying-glass'></i></button>
     </div>
     </form>
 </div>

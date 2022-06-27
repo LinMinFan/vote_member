@@ -24,23 +24,20 @@
 .vote_search .searc_button{
     position: absolute;
     top: 10px;
-    left: calc(50% + 130px);
+    left: calc(50% + 110px);
 }
 .vote_search .searc_button .search_submit{
-    width: 50px;
-    border-radius: 35px;
-    background: #ffffff41;
-    outline: none;
-    border: 1px solid #ffffff74;
-    border-right: 1px solid #ffffff21;
-    border-bottom: 1px solid #ffffff21;
-    box-shadow: 0 5px 15px #00000041;
-    padding: 3px;
-    font-size: 14px;
+    width: 40px;
+    background-color: #ffffff00;
+    border: none;
+    font-size: 24px;
+    line-height: 24px;
+    text-shadow: 2px 2px 2px #000000c5;
     cursor: pointer;
-    font-weight: 600;
     transition: 0.5s;
 }
 .vote_search .searc_button .search_submit:hover{
-    background: #848484;
-    color: #ffffff;}
+    color: #2f2f2f;
+    text-shadow: 2px 2px 2px #000000c1;
+    transform: scale(1.2);
+}

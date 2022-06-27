@@ -32,21 +32,16 @@ if (isset($_POST['opt'])) {
             //dd($option);
             $option_id = $option['id'];
 
-            //note表單 => 要記錄 subject_id option_id
-            $sqlnote = "INSERT INTO `vote_member_note`(`subject_id`, `option_id`) VALUES ('$subject_id','$option_id')";
-            $pdo->exec($sqlnote);
+            //log表單 => 要記錄 user_id subject_id option_id
+            $sqllog = "INSERT INTO `vote_member_log`(`user_id`,`subject_id`,`option_id`) VALUES ('$userid','$subject_id','$option_id')";
+            $pdo->exec($sqllog);
         }
         //單選狀況    
     } else {
-
         $option_id = $_POST['opt'];
-        //note表單 => 要記錄 subject_id option_id
-        $sqlnote = "INSERT INTO `vote_member_note`(`subject_id`, `option_id`) VALUES ('$subject_id','$option_id')";
-        $pdo->exec($sqlnote);
+        $sqllog = "INSERT INTO `vote_member_log`(`user_id`,`subject_id`,`option_id`) VALUES ('$userid','$subject_id','$option_id')";
+        $pdo->exec($sqllog);
     }
-    //log表單 => 要記錄 user_id subject_id
-    $sqllog = "INSERT INTO `vote_member_log`(`user_id`, `subject_id`) VALUES ('$userid','$subject_id')";
-    $pdo->exec($sqllog);
 }
 
 

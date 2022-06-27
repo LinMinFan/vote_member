@@ -198,19 +198,13 @@
 |subject_id|int(11)|--|無|--|投票主題id|
 |choice|varchar(20)|--|無|--|選項內容|
 
-### 投票主題紀錄:vote_member_log
+### 投票主題選項紀錄:vote_member_log
 
 |名稱|類型|屬性|預設值|額外資訊|備註|
 |--|--|--|--|--|--|
 |id|int(11)|UNSIGNED|無|AI|序號|
 |user_id|int(11)|--|無|--|投票者id|
 |subject_id|int(11)|--|無|--|投票主題id|
-### 投票選項紀錄:vote_member_note
-
-|名稱|類型|屬性|預設值|額外資訊|備註|
-|--|--|--|--|--|--|
-|id|int(11)|UNSIGNED|無|AI|序號|
-|subject_id|int(11)|--|無|--|主題id|
 |option_id|int(11)|--|無|--|選項id|
 
 ### 主題分類:vote_member_type

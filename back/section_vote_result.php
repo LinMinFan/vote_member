@@ -15,7 +15,7 @@ echo "<br>";
 //計算主題投票人數
 //SELECT COUNT(*) FROM `vote_member_log` WHERE `subject_id` = 'subject_id'
 //$quantity = ;
-$totalsql = "SELECT COUNT(*) FROM `vote_member_log` WHERE `subject_id` = " . $subject_id;
+$totalsql = "SELECT COUNT(*) FROM (SELECT * FROM `vote_member_log` WHERE `subject_id` = '$subject_id' GROUP BY `user_id`)A";
 $quantity = $pdo->query($totalsql)->fetchColumn();
 echo '參加人數:' . $quantity . '人';
 
@@ -34,10 +34,10 @@ $options = all('vote_member_options',$opwhere);
 
 //選項選取次數
 //SELECT COUNT(*) FROM `vote_member_note` WHERE `option_id` = '$option_id'
-//$option_id = ;
 //$option_choice = ;
 foreach ($options as $key => $option) {
-    $choicecount = "SELECT COUNT(*) FROM `vote_member_note` WHERE `option_id` = " . $option['id'] ;
+    $option_id = $option['id'];
+    $choicecount = "SELECT COUNT(*) FROM `vote_member_log` WHERE `option_id` = '$option_id'" ;
 
     $option_choice = $pdo->query($choicecount)->fetchColumn();
 

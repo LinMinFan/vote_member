@@ -79,6 +79,7 @@ $top_vote = $pdo->query($topsql)->fetchAll(PDO::FETCH_ASSOC);
 <div class="advertise">
     <div class="adbar">
         我是廣告圖2:1
+        後台圖片管理建置中
     </div>
 </div>
 </div>
