@@ -13,7 +13,7 @@ FROM `vote_member_subjects`,`vote_member_log`
 WHERE `vote_member_subjects` . `id` = `vote_member_log` . `subject_id`
 GROUP BY `vote_member_log` . `subject_id`
 ORDER BY COUNT(`vote_member_log` . `user_id`) DESC , `vote_member_subjects` . `end` DESC
-LIMIT 0,4
+LIMIT 4
 ";
 $top_vote = $pdo->query($topsql)->fetchAll(PDO::FETCH_ASSOC);
 //dd($top_vote);

@@ -18,7 +18,6 @@ foreach ($subject_log as $join_log) {
     if ($log_id == $subject_id) {
         to("./vote_result.php?subject=$subject_id");
     }
-    
 }
 
 $subject = find('vote_member_subjects', $subject_id);
@@ -34,28 +33,34 @@ $opts = all('vote_member_options', $where);
         <h1><?= $subject['subject']; ?></h1>
     </div>
     <div class="subject_form">
-        <form action="./api/join_vote.php?multiple=<?= $subject['multiple']; ?>&&subject_id=<?= $subject_id; ?>" method="post">
-            <?php
-            foreach ($opts as $opt) {
-            ?>
-                <div class="vote_item">
+        <form class="vote_item" action="./api/join_vote.php?multiple=<?= $subject['multiple']; ?>&&subject_id=<?= $subject_id; ?>" method="post">
+            <table>
+                <?php
+                foreach ($opts as $key => $opt) {
+                ?>
                     <?php
                     if ($subject['multiple'] == 0) {
                     ?>
-                        <input type="radio" name="opt" value="<?= $opt['id']; ?>">
-                    <?php
-                    } else {
-                    ?>
-                        <input type="checkbox" name="opt[]" value="<?= $opt['id']; ?>">
-                    <?php
-                    }
-                    ?>
-                    <label for=""><?= $opt['choice']; ?></label>
-                </div>
+                        <tr>
+                            <td>
+                                <input id="opt<?= $key; ?>" type="radio" name="opt" value="<?= $opt['id']; ?> ">
+                            <?php
+                        } else {
+                            ?>
+                        <tr>
+                            <td>
+                                <input id="opt<?= $key; ?>" type="checkbox" name="opt[]" value="<?= $opt['id']; ?>">
+                            <?php
+                        }
+                            ?>
+                            <label for="opt<?= $key; ?>"><?= $opt['choice']; ?></label>
+                            </td>
+                        </tr>
 
-            <?php
-            }
-            ?>
+                    <?php
+                }
+                    ?>
+            </table>
             <div class="subject_button">
                 <input type="submit" value="確定">
                 <input type="reset" value="重置">

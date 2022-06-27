@@ -1,8 +1,11 @@
-.vote_star{
+/* 投票列表區塊 */
+.vote_star {
     width: 100%;
     min-height: 100%;
 }
-.subject_name{
+
+/* 投票主題 */
+.subject_name {
     position: relative;
     top: 10px;
     width: 100%;
@@ -10,8 +13,72 @@
     color: #00447b;
     text-shadow: 2px 2px 3px #0074d3;
 }
-.subject_form{
+
+/* 選項區塊 */
+.subject_form {
     width: 80%;
     min-height: calc(100% - 80px);
     margin: 15px auto;
+    display: flex;
+    justify-content: center;
+}
+
+.vote_item {
+    width: 80%;
+}
+
+.vote_item table {
+    width: 100%;
+}
+
+.vote_item tr {
+    height: 40px;
+}
+
+.vote_item label {
+    display: inline-block;
+    width: calc(100% - 20px);
+    height: 40px;
+    line-height: 40px;
+    letter-spacing: 3px;
+    font-weight: 600;
+    color: #ffffffaa;
+}
+
+.vote_item label:hover {
+    background: #0074d3b5;
+}
+
+.subject_button {
+    position: absolute;
+    bottom: 20px;
+    left: calc(50% - 75px);
+    width: 150px;
+    height: 30px;
+    line-height: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.subject_button input {
+    background: #ffffff;
+    max-width: 60px;
+    padding: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    font-weight: 600;
+    outline: none;
+    border-radius: 15px;
+    border: 1px solid #ffffff74;
+    border-right: 1px solid #ffffff21;
+    border-bottom: 1px solid #ffffff21;
+    letter-spacing: 1px;
+    color: #000000;
+    box-shadow: 0 5px 15px #00000041;
+    transition: 0.5s;
+}
+
+.subject_button input:hover {
+    background: #848484;
+    color: #ffffff;
 }

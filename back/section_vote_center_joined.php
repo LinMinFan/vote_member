@@ -15,14 +15,13 @@ if ($defaultT == 0) {
     $kindsql = "&& `type_id` = '$defaultT'";
 }
 
-//比對已投票紀錄將投票主題顯示在使用連表查詢
-//SELECT `vote_member_subjects` . * , `vote_member_log` . `user_id`
-//FROM `vote_member_subjects`,`vote_member_log` 
-//WHERE `vote_member_subjects` . `id` = `vote_member_log` . `subject_id` && `vote_member_log` . `user_id` = session['id'] ORDER BY `id` ASC
+//比對已投票紀錄將投票主題
+//SELECT * 
+//FROM (SELECT * FROM `vote_member_log` WHERE `user_id` = '14' GROUP BY `subject_id`)A
 $user_id = $_SESSION['id'];
-$logsql = "SELECT `vote_member_subjects` . * , `vote_member_log` . `user_id` 
-FROM `vote_member_subjects`,`vote_member_log` 
-WHERE `vote_member_subjects` . `id` = `vote_member_log` . `subject_id` && `vote_member_log` . `user_id` = $user_id 
+$logsql = "SELECT `vote_member_subjects` . * FROM `vote_member_subjects` , 
+(SELECT * FROM `vote_member_log` WHERE `user_id` = '14' GROUP BY `subject_id`)A
+WHERE `vote_member_subjects` . `id` = A . `subject_id`
 ";
 //組合語法
 $allsql = $logsql . " " . $kindsql . " " . $ordersql . " " . $limitsql;

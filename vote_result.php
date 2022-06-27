@@ -21,6 +21,7 @@ if (isset($_SESSION['user'])) {
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/vote_center.css">
     <link rel="stylesheet" href="./css/vote_star.css">
+    <link rel="stylesheet" href="./css/vote_result.css">
     <link rel="stylesheet" href="./css/header.css">
     <link rel="stylesheet" href="./css/footer.css">
 

@@ -1,0 +1,142 @@
+/* 結果區塊 */
+.result{
+    width: 90%;
+    min-height: 80vh;
+    display: flex;
+    flex-wrap: wrap;
+}
+/* 投票主題 */
+.major{
+    width: 100%;
+    text-align: center;
+}
+
+/* 選項列表區塊 */
+.options_result{
+    width: 30%;
+    height: calc(80vh - 45px);
+}
+
+.options_result table{
+    width: 90%;
+    max-height: 100%;
+    margin: 0 auto;
+}
+
+.options_result tr{
+    height: calc(70vh / 10);
+    font-size: 14px;
+}
+
+/* 選項方塊顏色表示 */
+.color1{
+    color: #8BB010;
+}
+.color2{
+    color: #3465af;
+}
+.color3{
+    color: #CDFC30;
+}
+.color4{
+    color: #FC3217;
+}
+.color5{
+    color: #B33E2E;
+}
+.color6{
+    color: #269146;
+}
+.color7{
+    color: #9E66DE;
+}
+.color8{
+    color: #50DE7A;
+}
+.color9{
+    color: #DE9A3A;
+}
+.color10{
+    color: #91682D;
+}
+
+/* 百分比顯示區 */
+.options_sheet{
+    width: 70%;
+    height: calc(80vh - 45px);
+}
+
+.quantity{
+    margin: 10px 0;
+}
+
+.result_img{
+    width: 100%;
+    height: calc(80vh - 135px);
+    margin: 10px 0;
+}
+
+/* 長條圖 */
+.flex_img{
+    width: 100%;
+    height: 350px;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+}
+
+.rectangle{
+    width: 40px;
+    height: 350px;
+}
+
+.box1{
+    background: #8BB010;
+    height: calc(var(--i) * 350px);
+}
+.box2{
+    background: #3465af;
+    height: calc(var(--i) * 350px);
+}
+.box3{
+    background: #CDFC30;
+    height: calc(var(--i) * 350px);
+}
+.box4{
+    background: #FC3217;
+    height: calc(var(--i) * 350px);
+}
+.box5{
+    background: #B33E2E;
+    height: calc(var(--i) * 350px);
+}
+.box6{
+    background: #269146;
+    height: calc(var(--i) * 350px);
+}
+.box7{
+    background: #9E66DE;
+    height: calc(var(--i) * 350px);
+}
+.box8{
+    background: #50DE7A;
+    height: calc(var(--i) * 350px);
+}
+.box9{
+    background: #DE9A3A;
+    height: calc(var(--i) * 350px);
+}
+.box10{
+    background: #91682D;
+    height: calc(var(--i) * 350px);
+}
+
+/* 百分比 */
+.flex_percent{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    margin-top: 10px;
+}
