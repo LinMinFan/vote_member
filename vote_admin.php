@@ -8,8 +8,17 @@ if (!isset($_SESSION['user'])) {
     //header('location:/login.php');
     to('login.php');
 }
+$user_id = $_SESSION['id'];
+$account = $_SESSION['user'];
+//若session非管理者回使用者投票中心
+//SELECT * FROM `vote_member_admin` WHERE `user_id` = '$user_id' && `account` = '$account'
+$chk_sql = "SELECT * FROM `vote_member_admin` WHERE `user_id` = '$user_id' && `account` = '$account'";
+$chk_acc = $pdo->query($chk_sql)->fetchColumn();
+if ($chk_acc == 0) {
+    to('vote_center.php');
+}
 
-//抓取資料
+//抓取分類資料
 $types = all('vote_member_type');
 
 //定義今日秒數
@@ -30,14 +39,13 @@ $dateall = find('vote_member_users', $_SESSION['id']);
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>投票中心</title>
+    <title>管理中心</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/vote_center.css">
-    <link rel="stylesheet" href="./css/vote_center_default.css">
-    <link rel="stylesheet" href="./css/vote_center_search.css">
     <link rel="stylesheet" href="./css/vote_center_create.css">
-    <link rel="stylesheet" href="./css/vote_center_delete.css">
+    <link rel="stylesheet" href="./css/vote_center_admin.css">
+    <link rel="stylesheet" href="./css/vote_center_photo.css">
     <link rel="stylesheet" href="./css/header.css">
     <link rel="stylesheet" href="./css/footer.css">
 
@@ -54,7 +62,11 @@ $dateall = find('vote_member_users', $_SESSION['id']);
     </div>
     <div class="section">
         <?php
-        include "./layout/section_vote_center.php";
+        if(isset($_GET['photo'])){
+            include "./admin/section_vote_photo.php";
+        }else {
+            include "./admin/section_vote_admin.php";
+        }
         ?>
     </div>
     <div class="footer">

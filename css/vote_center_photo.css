@@ -1,0 +1,27 @@
+.vote_admin{
+    position: relative;
+    width: 80%;
+    min-height: calc(80vh - 60px);
+}
+.control{
+    position: absolute;
+    top: 5px;
+}
+.control a{
+    text-decoration: none;
+    margin: 0px 10px;
+    transition: 0.5s;
+    font-weight: bold;
+    color: #4b4b4b;
+}
+
+.control a:hover{
+    background: #0000003d;
+}
+
+.container{
+    width: 100%;
+    min-height: 80%;
+    position: relative;
+    margin: auto 0;
+}
