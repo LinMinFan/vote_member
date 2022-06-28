@@ -139,7 +139,7 @@ $pagefront = ($pageNow == $pageEnd) ? $pageEnd : $pageNow + 1;   //後一頁 if 
         <a href="./vote_center.php?p=<?= $pageBack; ?>&o=<?= $order; ?>&t=<?= $defaultT; ?>"><i class="fa-solid fa-backward"></i></a>
         <!-- 以當前頁為準 固定5頁 前0後4 前1後3 前2後2 前3後1 前4後0 使用判斷式判斷各種狀況-->
         <?php
-        if ($pageSum == 1) {
+        if ($pageSum <= 1) {
         ?>
             <!-- 固定第一頁 -->
             <a class="pageNow" href="./vote_center.php?p=<?= $pageStart; ?>&o=<?= $order; ?>&t=<?= $defaultT; ?>"><?= $pageStart; ?></a>

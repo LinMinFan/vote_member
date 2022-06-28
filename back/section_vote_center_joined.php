@@ -20,7 +20,7 @@ if ($defaultT == 0) {
 //FROM (SELECT * FROM `vote_member_log` WHERE `user_id` = '14' GROUP BY `subject_id`)A
 $user_id = $_SESSION['id'];
 $logsql = "SELECT `vote_member_subjects` . * FROM `vote_member_subjects` , 
-(SELECT * FROM `vote_member_log` WHERE `user_id` = '14' GROUP BY `subject_id`)A
+(SELECT * FROM `vote_member_log` WHERE `user_id` = '$user_id' GROUP BY `subject_id`)A
 WHERE `vote_member_subjects` . `id` = A . `subject_id`
 ";
 //組合語法

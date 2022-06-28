@@ -83,6 +83,7 @@
     display: flex;
     justify-content: space-around;
     align-items: flex-end;
+    overflow: hidden;
 }
 
 .rectangle{
@@ -92,43 +93,89 @@
 
 .box1{
     background: #8BB010;
-    height: calc(var(--i) * 350px);
+    transform: translateY(350px);
+    animation-name: height;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
 }
 .box2{
     background: #3465af;
-    height: calc(var(--i) * 350px);
+    transform: translateY(350px);
+    animation-name: height;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
 }
 .box3{
     background: #CDFC30;
-    height: calc(var(--i) * 350px);
+    transform: translateY(350px);
+    animation-name: height;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
 }
 .box4{
     background: #FC3217;
-    height: calc(var(--i) * 350px);
+    transform: translateY(350px);
+    animation-name: height;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
 }
 .box5{
     background: #B33E2E;
-    height: calc(var(--i) * 350px);
+    transform: translateY(350px);
+    animation-name: height;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
 }
 .box6{
     background: #269146;
-    height: calc(var(--i) * 350px);
+    transform: translateY(350px);
+    animation-name: height;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
 }
 .box7{
     background: #9E66DE;
-    height: calc(var(--i) * 350px);
+    transform: translateY(350px);
+    animation-name: height;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
 }
 .box8{
     background: #50DE7A;
-    height: calc(var(--i) * 350px);
+    transform: translateY(350px);
+    animation-name: height;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
 }
 .box9{
     background: #DE9A3A;
-    height: calc(var(--i) * 350px);
+    transform: translateY(350px);
+    animation-name: height;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
 }
 .box10{
     background: #91682D;
-    height: calc(var(--i) * 350px);
+    transform: translateY(350px);
+    animation-name: height;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+}
+
+@keyframes height{
+    100%{
+        transform:  translateY(calc(350px - (var(--i) * 350px)));
+    }
 }
 
 /* 百分比 */
