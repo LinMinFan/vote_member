@@ -7,10 +7,10 @@
         <h2>重設密碼</h2>
         <form action="./api/chk_acc.php" method="post">
             <div class="inputbox">
-                <input type="text" name="account" id="" placeholder="帳號:">
+                <input type="text" name="account" id="" placeholder="帳號:" required>
             </div>
             <div class="inputbox">
-                <input type="email" name="email" id="" placeholder="信箱:">
+                <input type="email" name="email" id="" placeholder="信箱:" required>
             </div>
             <div class="inputbox">
                 <input type="submit" name="" id="" value="確定">

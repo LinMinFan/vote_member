@@ -17,6 +17,23 @@ LIMIT 4
 ";
 $top_vote = $pdo->query($topsql)->fetchAll(PDO::FETCH_ASSOC);
 //dd($top_vote);
+
+//讀取現有圖片位置
+//圖片一
+$p1sql = "SELECT * FROM `vote_member_image` WHERE `id` = '1'";
+$p1Url = $pdo->query($p1sql)->fetch(PDO::FETCH_ASSOC);
+//dd($p1Url);
+$img1 = $p1Url['url'];
+//圖片二
+$p2sql = "SELECT * FROM `vote_member_image` WHERE `id` = '2'";
+$p2Url = $pdo->query($p2sql)->fetch(PDO::FETCH_ASSOC);
+$img2 = $p2Url['url'];
+//圖片三
+$p3sql = "SELECT * FROM `vote_member_image` WHERE `id` = '3'";
+$p3Url = $pdo->query($p3sql)->fetch(PDO::FETCH_ASSOC);
+$img3 = $p3Url['url'];
+
+
 ?>
 <div class="index">
 <div class="information">
@@ -77,9 +94,14 @@ $top_vote = $pdo->query($topsql)->fetchAll(PDO::FETCH_ASSOC);
 </div>
 <!-- 廣告圖片區 -->
 <div class="advertise">
-    <div class="adbar">
-        我是廣告圖2:1
-        後台圖片管理建置中
+    <div class="adbar1" style="background-image:url(<?=$img1;?>) ;">
+        
+    </div>
+    <div class="adbar2" style="background-image:url(<?=$img2;?>) ;">
+        
+    </div>
+    <div class="adbar3" style="background-image:url(<?=$img3;?>) ;">
+        
     </div>
 </div>
 </div>

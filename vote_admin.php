@@ -31,6 +31,21 @@ $today = date(strtotime('today'));
 //$dateall = all('vote_member_users', $date);
 $dateall = find('vote_member_users', $_SESSION['id']);
 
+//讀取現有圖片位置
+//圖片一
+$p1sql = "SELECT * FROM `vote_member_image` WHERE `id` = '1'";
+$p1Url = $pdo->query($p1sql)->fetch(PDO::FETCH_ASSOC);
+//dd($p1Url);
+$min_img1 = $p1Url['min_url'];
+//圖片二
+$p2sql = "SELECT * FROM `vote_member_image` WHERE `id` = '2'";
+$p2Url = $pdo->query($p2sql)->fetch(PDO::FETCH_ASSOC);
+$min_img2 = $p2Url['min_url'];
+//圖片三
+$p3sql = "SELECT * FROM `vote_member_image` WHERE `id` = '3'";
+$p3Url = $pdo->query($p3sql)->fetch(PDO::FETCH_ASSOC);
+$min_img3 = $p3Url['min_url'];
+
 ?>
 <!DOCTYPE html>
 <html lang="en">

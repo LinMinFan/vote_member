@@ -25,3 +25,39 @@
     position: relative;
     margin: auto 0;
 }
+
+.photoform{
+    display: flex;
+    min-height: calc(80vh - 120px);
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+.form {
+    width: 750px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img {
+    width: 250px;
+    height: 125px;
+    border: 1px solid lightgray;
+}
+
+.upload {
+    width: calc(100% - 300px);
+    margin: 20px;
+}
+
+form label{
+    width: 50px;
+}
+form input[type="file"]{
+    width: 200px;
+}
+form input[type="submit"]{
+    width: 50px;
+}
