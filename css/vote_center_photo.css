@@ -29,8 +29,8 @@
 .photoform{
     display: flex;
     min-height: calc(80vh - 120px);
-    flex-wrap: wrap;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
     margin: 20px 0;
 }

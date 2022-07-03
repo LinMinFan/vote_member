@@ -9,7 +9,7 @@
 .login {
     position: relative;
     width: 400px;
-    min-height: 400px;
+    max-height: 400px;
     background: #ffffff1b;
     border-radius: 10px;
     display: flex;
@@ -20,7 +20,7 @@
     border: 1px solid #ffffff74;
     border-right: 1px solid #ffffff21;
     border-bottom: 1px solid #ffffff21;
-    margin: 100px auto;
+    margin: auto auto;
 }
 /* 表單資料區 */
 .loginform {

@@ -1,11 +1,12 @@
 /* 投票列表 */
 .container {
-    max-width: 100%;
+    max-width: 1200px;
     min-height: calc(80vh - 60px);
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     padding: 10px 5px;
+    margin: 0 auto;
 }
 
 /* 分類選單 */
