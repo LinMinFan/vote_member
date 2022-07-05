@@ -25,7 +25,7 @@ if (empty($chk_a)) {
     //變更密碼sql語法
     $sql="UPDATE `vote_member_users` SET `password`='$pw' WHERE `account`= '$acc';";
     $pdo->exec($sql);
-    header('location:login.php?update=ok');
+    //header('location:login.php?update=ok');
     to('../login.php?error=密碼已變更1234');
 }
 

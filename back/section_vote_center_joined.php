@@ -58,11 +58,11 @@ $pagefront = ($pageNow == $pageEnd) ? $pageEnd : $pageNow + 1;   //後一頁 if 
     <div class="select">
         <ul>
             <div class="selectText">分類</div>
-            <li><a href="./vote_center.php?joined=activ&p=<?= $pageNow; ?>&o=<?= $order; ?>&t=0">全部</a></li>
+            <li><a href="./vote_center.php?joined=activ&p=1&o=<?= $order; ?>&t=0">全部</a></li>
             <?php
             foreach ($types as $kind) {
             ?>
-                <li><a href="./vote_center.php?joined=activ&p=<?= $pageNow; ?>&o=<?= $order; ?>&t=<?= $kind['id']; ?>"><?= $kind['name']; ?></a></li>
+                <li><a href="./vote_center.php?joined=activ&p=1&o=<?= $order; ?>&t=<?= $kind['id']; ?>"><?= $kind['name']; ?></a></li>
             <?php
             }
             ?>

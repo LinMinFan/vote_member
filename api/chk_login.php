@@ -23,7 +23,7 @@ $pw = md5($_POST['password']);
 
 
 $chk_acc = "SELECT count(*) FROM `vote_member_users` WHERE `account`='$acc'";
-$chk_pw = "SELECT count(*) FROM `vote_member_users` WHERE`password`='$pw'";
+$chk_pw = "SELECT count(*) FROM `vote_member_users` WHERE  `account`='$acc' && `password`='$pw'";
 
 
 $useracc = $pdo->query($chk_acc)->fetchColumn();

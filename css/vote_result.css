@@ -74,6 +74,9 @@
     width: 100%;
     height: calc(80vh - 135px);
     margin: 10px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 /* 長條圖 */
