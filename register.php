@@ -1,9 +1,18 @@
 <?php
 include "./api/function.php";
+$pdo = pdo();
 //若有session直接導向會員中心不再停留此頁
 if (isset($_SESSION['user'])) {
-    //header('location:/member_center.php');
-    to('member_center.php');
+    $acc = $_SESSION['user'];
+    $chk_acc = "SELECT count(*) FROM `vote_member_users` WHERE `account`='$acc'";
+    $chk_a = $pdo->query($chk_acc)->fetchColumn();
+    if (empty($chk_a)) {
+        unset($_SESSION['user']);
+        to('login.php');
+    }else{
+        //header('location:/member_center.php');
+        to('member_center.php');
+    }
 }
 ?>
 <!DOCTYPE html>

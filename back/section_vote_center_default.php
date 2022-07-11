@@ -87,6 +87,7 @@ $pagefront = ($pageNow == $pageEnd) ? $pageEnd : $pageNow + 1;   //後一頁 if 
         $type_id = $value['type_id'];   //分類
         $start = $value['start'];   //開始時間
         $end = $value['end'];   //結束時間
+        $starttime = date(strtotime($start));   //開始秒數
         $endtime = date(strtotime($end));   //結束秒數
     ?>
         <div class='card'>
@@ -115,6 +116,10 @@ $pagefront = ($pageNow == $pageEnd) ? $pageEnd : $pageNow + 1;   //後一頁 if 
                         <h3>已結束</h3>
                     </div>
 
+                <?php
+                } else if ($today < $starttime) {
+                ?>
+                    <h3>尚未開始</h3>
                 <?php
                 } else {
                 ?>

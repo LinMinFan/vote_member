@@ -10,12 +10,12 @@ $search_log = "SELECT * FROM `vote_member_subjects` WHERE `subject` LIKE '%$sear
 $vote_search = $pdo->query($search_log)->fetchAll(PDO::FETCH_ASSOC);
 
 $sheet = 8;
-$order = (isset($_GET['o']))?$_GET['o'] :"desc";    //排序
+$order = (isset($_GET['o'])) ? $_GET['o'] : "desc";    //排序
 $ordersql = ($order == 'asc') ? 'ORDER BY `end` ASC' : 'ORDER BY `end` DESC';
-$pageNow = (isset($_GET['p']))?$_GET['p'] :"1";  //當前頁
+$pageNow = (isset($_GET['p'])) ? $_GET['p'] : "1";  //當前頁
 $limitstrt =  ($pageNow - 1) * $sheet; //計算每頁資料由第幾筆資料開始取0 = id 1
 $limitsql = "limit $limitstrt,$sheet"; //分頁條件語法
-$defaultT = (isset($_GET['t']))?$_GET['t'] :"0";
+$defaultT = (isset($_GET['t'])) ? $_GET['t'] : "0";
 if ($defaultT == 0) {
     $kindsql = ""; //建立分類條件語法
 } else {
@@ -45,15 +45,15 @@ $pagefront = ($pageNow == $pageEnd) ? $pageEnd : $pageNow + 1;   //後一頁 if 
 <div class="vote_search">
     <form action="./vote_center.php">
         <div class="search_input">
-        <input type="text" name="search" value="activ" hidden>
-        <input type="text" name="p" value="<?= $pageNow; ?>" hidden>
-        <input type="text" name="o" value="<?= $order; ?>" hidden>
-        <input type="text" name="t" value="<?= $defaultT; ?>" hidden>
-        <input type="text" name="codition" required>
-    </div>
-    <div class="searc_button">
-    <button class="search_submit" type="submit"><i class='fa-solid fa-magnifying-glass'></i></button>
-    </div>
+            <input type="text" name="search" value="activ" hidden>
+            <input type="text" name="p" value="<?= $pageNow; ?>" hidden>
+            <input type="text" name="o" value="<?= $order; ?>" hidden>
+            <input type="text" name="t" value="<?= $defaultT; ?>" hidden>
+            <input type="text" name="codition" required>
+        </div>
+        <div class="searc_button">
+            <button class="search_submit" type="submit"><i class='fa-solid fa-magnifying-glass'></i></button>
+        </div>
     </form>
 </div>
 <div class='container'>
@@ -95,6 +95,7 @@ $pagefront = ($pageNow == $pageEnd) ? $pageEnd : $pageNow + 1;   //後一頁 if 
         $type_id = $value['type_id'];   //分類
         $start = $value['start'];   //開始時間
         $end = $value['end'];   //結束時間
+        $starttime = date(strtotime($start));   //開始秒數
         $endtime = date(strtotime($end));   //結束秒數
     ?>
         <div class='card'>
@@ -123,6 +124,10 @@ $pagefront = ($pageNow == $pageEnd) ? $pageEnd : $pageNow + 1;   //後一頁 if 
                         <h3>已結束</h3>
                     </div>
 
+                <?php
+                } else if ($today < $starttime) {
+                ?>
+                    <h3>尚未開始</h3>
                 <?php
                 } else {
                 ?>

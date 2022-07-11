@@ -1,9 +1,18 @@
 <?php
 include "./api/function.php";
+$pdo = pdo();
 //若無session直接導向登入頁不停留此頁
 if (!isset($_SESSION['user'])) {
     //header('location:/login.php');
     to('login.php');
+}else{
+    $acc = $_SESSION['user'];
+    $chk_acc = "SELECT count(*) FROM `vote_member_users` WHERE `account`='$acc'";
+    $chk_a = $pdo->query($chk_acc)->fetchColumn();
+    if (empty($chk_a)) {
+        unset($_SESSION['user']);
+        to('login.php');
+    }
 }
 //以登入的session抓取會員資料
 //$sql ="SELECT * FROM `vote_member_users` WHERE `account`='{$_SESSION['user']}'";

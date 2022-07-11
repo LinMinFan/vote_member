@@ -7,8 +7,12 @@
 }
 /* 投票主題 */
 .major{
+    position: relative;
+    top: 10px;
     width: 100%;
     text-align: center;
+    color: #00447b;
+    text-shadow: 2px 2px 3px #0074d3;
 }
 
 /* 選項列表區塊 */
