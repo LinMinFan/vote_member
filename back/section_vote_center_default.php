@@ -183,6 +183,7 @@ $pagefront = ($pageNow == $pageEnd) ? $pageEnd : $pageNow + 1;   //後一頁 if 
             <a href="./vote_center.php?p=<?= ($pageStart + 1); ?>&o=<?= $order; ?>&t=<?= $defaultT; ?>"><?= ($pageStart + 1); ?></a>
             <a href="./vote_center.php?p=<?= ($pageStart + 2); ?>&o=<?= $order; ?>&t=<?= $defaultT; ?>"><?= ($pageStart + 2); ?></a>
             <a href="./vote_center.php?p=<?= ($pageStart + 3); ?>&o=<?= $order; ?>&t=<?= $defaultT; ?>"><?= ($pageStart + 3); ?></a>
+            <span>...</span>
             <a href="./vote_center.php?p=<?= $pageEnd; ?>&o=<?= $order; ?>&t=<?= $defaultT; ?>"><?= $pageEnd; ?></a>
         <?php
         } else if ($pageSum > 5 && $pageNow == $pageStart + 1) {
@@ -191,11 +192,13 @@ $pagefront = ($pageNow == $pageEnd) ? $pageEnd : $pageNow + 1;   //後一頁 if 
             <a class="pageNow" href="./vote_center.php?p=<?= ($pageNow); ?>&o=<?= $order; ?>&t=<?= $defaultT; ?>"><?= ($pageNow); ?></a>
             <a href="./vote_center.php?p=<?= ($pageNow + 1); ?>&o=<?= $order; ?>&t=<?= $defaultT; ?>"><?= ($pageNow + 1); ?></a>
             <a href="./vote_center.php?p=<?= ($pageNow + 2); ?>&o=<?= $order; ?>&t=<?= $defaultT; ?>"><?= ($pageNow + 2); ?></a>
+            <span>...</span>
             <a href="./vote_center.php?p=<?= $pageEnd; ?>&o=<?= $order; ?>&t=<?= $defaultT; ?>"><?= $pageEnd; ?></a>
         <?php
         } else if ($pageSum > 5 && $pageNow == $pageEnd) {
         ?>
             <a href="./vote_center.php?p=<?= $pageStart; ?>&o=<?= $order; ?>&t=<?= $defaultT; ?>"><?= $pageStart; ?></a>
+            <span>...</span>
             <a href="./vote_center.php?p=<?= ($pageEnd - 3); ?>&o=<?= $order; ?>&t=<?= $defaultT; ?>"><?= ($pageEnd - 3); ?></a>
             <a href="./vote_center.php?p=<?= ($pageEnd - 2); ?>&o=<?= $order; ?>&t=<?= $defaultT; ?>"><?= ($pageEnd - 2); ?></a>
             <a href="./vote_center.php?p=<?= ($pageEnd - 1); ?>&o=<?= $order; ?>&t=<?= $defaultT; ?>"><?= ($pageEnd - 1); ?></a>
@@ -204,6 +207,7 @@ $pagefront = ($pageNow == $pageEnd) ? $pageEnd : $pageNow + 1;   //後一頁 if 
         } else if ($pageSum > 5 && $pageNow == ($pageEnd - 1)) {
         ?>
             <a href="./vote_center.php?p=<?= $pageStart; ?>&o=<?= $order; ?>&t=<?= $defaultT; ?>"><?= $pageStart; ?></a>
+            <span>...</span>
             <a href="./vote_center.php?p=<?= ($pageNow - 2); ?>&o=<?= $order; ?>&t=<?= $defaultT; ?>"><?= ($pageNow - 2); ?></a>
             <a href="./vote_center.php?p=<?= ($pageNow - 1); ?>&o=<?= $order; ?>&t=<?= $defaultT; ?>"><?= ($pageNow - 1); ?></a>
             <a class="pageNow" href="./vote_center.php?p=<?= ($pageNow); ?>&o=<?= $order; ?>&t=<?= $defaultT; ?>"><?= ($pageNow); ?></a>
@@ -212,9 +216,11 @@ $pagefront = ($pageNow == $pageEnd) ? $pageEnd : $pageNow + 1;   //後一頁 if 
         } else {
         ?>
             <a href="./vote_center.php?p=<?= $pageStart; ?>&o=<?= $order; ?>&t=<?= $defaultT; ?>"><?= $pageStart; ?></a>
+            <span>...</span>
             <a href="./vote_center.php?p=<?= ($pageNow - 1); ?>&o=<?= $order; ?>&t=<?= $defaultT; ?>"><?= ($pageNow - 1); ?></a>
             <a class="pageNow" href="./vote_center.php?p=<?= ($pageNow); ?>&o=<?= $order; ?>&t=<?= $defaultT; ?>"><?= ($pageNow); ?></a>
             <a href="./vote_center.php?p=<?= ($pageNow + 1); ?>&o=<?= $order; ?>&t=<?= $defaultT; ?>"><?= ($pageNow + 1); ?></a>
+            <span>...</span>
             <a href="./vote_center.php?p=<?= $pageEnd; ?>&o=<?= $order; ?>&t=<?= $defaultT; ?>"><?= $pageEnd; ?></a>
         <?php
         }

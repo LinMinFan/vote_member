@@ -190,6 +190,7 @@ $pagefront = ($pageNow == $pageEnd) ? $pageEnd : $pageNow + 1;   //後一頁 if 
         <a href="./vote_center.php?search=activ&p=<?= ($pageStart + 1); ?>&o=<?= $order; ?>&t=<?= $defaultT; ?>&codition=<?= $search; ?>"><?= ($pageStart + 1); ?></a>
         <a href="./vote_center.php?search=activ&p=<?= ($pageStart + 2); ?>&o=<?= $order; ?>&t=<?= $defaultT; ?>&codition=<?= $search; ?>"><?= ($pageStart + 2); ?></a>
         <a href="./vote_center.php?search=activ&p=<?= ($pageStart + 3); ?>&o=<?= $order; ?>&t=<?= $defaultT; ?>&codition=<?= $search; ?>"><?= ($pageStart + 3); ?></a>
+        <span>...</span>
         <a href="./vote_center.php?search=activ&p=<?= $pageEnd; ?>&o=<?= $order; ?>&t=<?= $defaultT; ?>&codition=<?= $search; ?>"><?= $pageEnd; ?></a>
     <?php
     } else if ($pageSum > 5 && $pageNow == $pageStart + 1) {
@@ -198,11 +199,13 @@ $pagefront = ($pageNow == $pageEnd) ? $pageEnd : $pageNow + 1;   //後一頁 if 
         <a class="pageNow" href="./vote_center.php?search=activ&p=<?= ($pageNow); ?>&o=<?= $order; ?>&t=<?= $defaultT; ?>&codition=<?= $search; ?>"><?= ($pageNow); ?></a>
         <a href="./vote_center.php?search=activ&p=<?= ($pageNow + 1); ?>&o=<?= $order; ?>&t=<?= $defaultT; ?>&codition=<?= $search; ?>"><?= ($pageNow + 1); ?></a>
         <a href="./vote_center.php?search=activ&p=<?= ($pageNow + 2); ?>&o=<?= $order; ?>&t=<?= $defaultT; ?>&codition=<?= $search; ?>"><?= ($pageNow + 2); ?></a>
+        <span>...</span>
         <a href="./vote_center.php?search=activ&p=<?= $pageEnd; ?>&o=<?= $order; ?>&t=<?= $defaultT; ?>&codition=<?= $search; ?>"><?= $pageEnd; ?></a>
     <?php
     } else if ($pageSum > 5 && $pageNow == $pageEnd) {
     ?>
         <a href="./vote_center.php?search=activ&p=<?= $pageStart; ?>&o=<?= $order; ?>&t=<?= $defaultT; ?>&codition=<?= $search; ?>"><?= $pageStart; ?></a>
+        <span>...</span>
         <a href="./vote_center.php?search=activ&p=<?= ($pageEnd - 3); ?>&o=<?= $order; ?>&t=<?= $defaultT; ?>&codition=<?= $search; ?>"><?= ($pageEnd - 3); ?></a>
         <a href="./vote_center.php?search=activ&p=<?= ($pageEnd - 2); ?>&o=<?= $order; ?>&t=<?= $defaultT; ?>&codition=<?= $search; ?>"><?= ($pageEnd - 2); ?></a>
         <a href="./vote_center.php?search=activ&p=<?= ($pageEnd - 1); ?>&o=<?= $order; ?>&t=<?= $defaultT; ?>&codition=<?= $search; ?>"><?= ($pageEnd - 1); ?></a>
@@ -211,6 +214,7 @@ $pagefront = ($pageNow == $pageEnd) ? $pageEnd : $pageNow + 1;   //後一頁 if 
     } else if ($pageSum > 5 && $pageNow == ($pageEnd - 1)) {
     ?>
         <a href="./vote_center.php?search=activ&p=<?= $pageStart; ?>&o=<?= $order; ?>&t=<?= $defaultT; ?>&codition=<?= $search; ?>"><?= $pageStart; ?></a>
+        <span>...</span>
         <a href="./vote_center.php?search=activ&p=<?= ($pageNow - 2); ?>&o=<?= $order; ?>&t=<?= $defaultT; ?>&codition=<?= $search; ?>"><?= ($pageNow - 2); ?></a>
         <a href="./vote_center.php?search=activ&p=<?= ($pageNow - 1); ?>&o=<?= $order; ?>&t=<?= $defaultT; ?>&codition=<?= $search; ?>"><?= ($pageNow - 1); ?></a>
         <a class="pageNow" href="./vote_center.php?search=activ&p=<?= ($pageNow); ?>&o=<?= $order; ?>&t=<?= $defaultT; ?>&codition=<?= $search; ?>"><?= ($pageNow); ?></a>
@@ -219,9 +223,11 @@ $pagefront = ($pageNow == $pageEnd) ? $pageEnd : $pageNow + 1;   //後一頁 if 
     } else {
     ?>
         <a href="./vote_center.php?search=activ&p=<?= $pageStart; ?>&o=<?= $order; ?>&t=<?= $defaultT; ?>&codition=<?= $search; ?>"><?= $pageStart; ?></a>
+        <span>...</span>
         <a href="./vote_center.php?search=activ&p=<?= ($pageNow - 1); ?>&o=<?= $order; ?>&t=<?= $defaultT; ?>&codition=<?= $search; ?>"><?= ($pageNow - 1); ?></a>
         <a class="pageNow" href="./vote_center.php?search=activ&p=<?= ($pageNow); ?>&o=<?= $order; ?>&t=<?= $defaultT; ?>&codition=<?= $search; ?>"><?= ($pageNow); ?></a>
         <a href="./vote_center.php?search=activ&p=<?= ($pageNow + 1); ?>&o=<?= $order; ?>&t=<?= $defaultT; ?>&codition=<?= $search; ?>"><?= ($pageNow + 1); ?></a>
+        <span>...</span>
         <a href="./vote_center.php?search=activ&p=<?= $pageEnd; ?>&o=<?= $order; ?>&t=<?= $defaultT; ?>&codition=<?= $search; ?>"><?= $pageEnd; ?></a>
     <?php
     }
